@@ -1,0 +1,167 @@
+C:\Users\john tuza sylver\source\Schedule\Scheduler\Scheduler\bin\Debug\Scheduler.exe.config
+C:\Users\john tuza sylver\source\Schedule\Scheduler\Scheduler\bin\Debug\Scheduler.exe
+C:\Users\john tuza sylver\source\Schedule\Scheduler\Scheduler\bin\Debug\Scheduler.pdb
+C:\Users\john tuza sylver\source\Schedule\Scheduler\Scheduler\obj\Debug\Scheduler.csprojAssemblyReference.cache
+C:\Users\john tuza sylver\source\Schedule\Scheduler\Scheduler\obj\Debug\MainWindow.g.cs
+C:\Users\john tuza sylver\source\Schedule\Scheduler\Scheduler\obj\Debug\App.g.cs
+C:\Users\john tuza sylver\source\Schedule\Scheduler\Scheduler\obj\Debug\Scheduler_MarkupCompile.cache
+C:\Users\john tuza sylver\source\Schedule\Scheduler\Scheduler\obj\Debug\Scheduler_MarkupCompile.lref
+C:\Users\john tuza sylver\source\Schedule\Scheduler\Scheduler\obj\Debug\MainWindow.baml
+C:\Users\john tuza sylver\source\Schedule\Scheduler\Scheduler\obj\Debug\Scheduler.g.resources
+C:\Users\john tuza sylver\source\Schedule\Scheduler\Scheduler\obj\Debug\Scheduler.Properties.Resources.resources
+C:\Users\john tuza sylver\source\Schedule\Scheduler\Scheduler\obj\Debug\Scheduler.csproj.GenerateResource.cache
+C:\Users\john tuza sylver\source\Schedule\Scheduler\Scheduler\obj\Debug\Scheduler.csproj.CoreCompileInputs.cache
+C:\Users\john tuza sylver\source\Schedule\Scheduler\Scheduler\obj\Debug\Scheduler.exe
+C:\Users\john tuza sylver\source\Schedule\Scheduler\Scheduler\obj\Debug\Scheduler.pdb
+C:\Users\john tuza sylver\source\Schedule\Scheduler\Scheduler\bin\Debug\ControlzEx.dll
+C:\Users\john tuza sylver\source\Schedule\Scheduler\Scheduler\bin\Debug\MahApps.Metro.dll
+C:\Users\john tuza sylver\source\Schedule\Scheduler\Scheduler\bin\Debug\MaterialDesignColors.dll
+C:\Users\john tuza sylver\source\Schedule\Scheduler\Scheduler\bin\Debug\MaterialDesignThemes.MahApps.dll
+C:\Users\john tuza sylver\source\Schedule\Scheduler\Scheduler\bin\Debug\MaterialDesignThemes.Wpf.dll
+C:\Users\john tuza sylver\source\Schedule\Scheduler\Scheduler\bin\Debug\System.Windows.Interactivity.dll
+C:\Users\john tuza sylver\source\Schedule\Scheduler\Scheduler\bin\Debug\ControlzEx.pdb
+C:\Users\john tuza sylver\source\Schedule\Scheduler\Scheduler\bin\Debug\MahApps.Metro.pdb
+C:\Users\john tuza sylver\source\Schedule\Scheduler\Scheduler\bin\Debug\MahApps.Metro.xml
+C:\Users\john tuza sylver\source\Schedule\Scheduler\Scheduler\bin\Debug\MaterialDesignThemes.Wpf.pdb
+C:\Users\john tuza sylver\source\Schedule\Scheduler\Scheduler\bin\Debug\MaterialDesignThemes.Wpf.xml
+C:\Users\john tuza sylver\source\Schedule\Scheduler\Scheduler\obj\Debug\App.baml
+C:\Users\john tuza sylver\source\Schedule\Scheduler\Scheduler\obj\Debug\Scheduler.csproj.CopyComplete
+C:\Users\john tuza sylver\source\Schedule\Scheduler\Scheduler\obj\Debug\AccountWindow.g.cs
+C:\Users\john tuza sylver\source\Schedule\Scheduler\Scheduler\obj\Debug\AccountWindow.baml
+C:\Users\john tuza sylver\source\Schedule\Scheduler\Scheduler\obj\Debug\MasterWindow.g.cs
+C:\Users\john tuza sylver\source\Schedule\Scheduler\Scheduler\obj\Debug\MasterWindow.baml
+C:\Users\john tuza sylver\source\Schedule\Scheduler\Scheduler\obj\Debug\Views\AccountPage.g.cs
+C:\Users\john tuza sylver\source\Schedule\Scheduler\Scheduler\obj\Debug\Views\AccountPage.baml
+C:\Users\john tuza sylver\source\Schedule\Scheduler\Scheduler\obj\Debug\Views\Users\AddUsers.g.cs
+C:\Users\john tuza sylver\source\Schedule\Scheduler\Scheduler\obj\Debug\Views\Users\AllUsers.g.cs
+C:\Users\john tuza sylver\source\Schedule\Scheduler\Scheduler\obj\Debug\Views\Users\AddUsers.baml
+C:\Users\john tuza sylver\source\Schedule\Scheduler\Scheduler\obj\Debug\Views\Users\AllUsers.baml
+C:\Users\john tuza sylver\source\Schedule\Scheduler\Scheduler\obj\Debug\Views\Wards\IndexPage.g.cs
+C:\Users\john tuza sylver\source\Schedule\Scheduler\Scheduler\obj\Debug\Views\Wards\IndexPage.baml
+C:\Users\john tuza sylver\source\Schedule\Scheduler\Scheduler\bin\Debug\Newtonsoft.Json.dll
+C:\Users\john tuza sylver\source\Schedule\Scheduler\Scheduler\bin\Debug\RestSharp.dll
+C:\Users\john tuza sylver\source\Schedule\Scheduler\Scheduler\bin\Debug\Newtonsoft.Json.xml
+C:\Users\john tuza sylver\source\Schedule\Scheduler\Scheduler\bin\Debug\RestSharp.xml
+C:\Users\johnt\source\Schedule\Scheduler\Scheduler\bin\Debug\Scheduler.exe.config
+C:\Users\johnt\source\Schedule\Scheduler\Scheduler\bin\Debug\Scheduler.exe
+C:\Users\johnt\source\Schedule\Scheduler\Scheduler\bin\Debug\Scheduler.pdb
+C:\Users\johnt\source\Schedule\Scheduler\Scheduler\bin\Debug\ControlzEx.dll
+C:\Users\johnt\source\Schedule\Scheduler\Scheduler\bin\Debug\MahApps.Metro.dll
+C:\Users\johnt\source\Schedule\Scheduler\Scheduler\bin\Debug\MaterialDesignColors.dll
+C:\Users\johnt\source\Schedule\Scheduler\Scheduler\bin\Debug\MaterialDesignThemes.MahApps.dll
+C:\Users\johnt\source\Schedule\Scheduler\Scheduler\bin\Debug\MaterialDesignThemes.Wpf.dll
+C:\Users\johnt\source\Schedule\Scheduler\Scheduler\bin\Debug\Newtonsoft.Json.dll
+C:\Users\johnt\source\Schedule\Scheduler\Scheduler\bin\Debug\RestSharp.dll
+C:\Users\johnt\source\Schedule\Scheduler\Scheduler\bin\Debug\System.Windows.Interactivity.dll
+C:\Users\johnt\source\Schedule\Scheduler\Scheduler\bin\Debug\ControlzEx.pdb
+C:\Users\johnt\source\Schedule\Scheduler\Scheduler\bin\Debug\MahApps.Metro.pdb
+C:\Users\johnt\source\Schedule\Scheduler\Scheduler\bin\Debug\MahApps.Metro.xml
+C:\Users\johnt\source\Schedule\Scheduler\Scheduler\bin\Debug\MaterialDesignThemes.Wpf.pdb
+C:\Users\johnt\source\Schedule\Scheduler\Scheduler\bin\Debug\MaterialDesignThemes.Wpf.xml
+C:\Users\johnt\source\Schedule\Scheduler\Scheduler\bin\Debug\Newtonsoft.Json.xml
+C:\Users\johnt\source\Schedule\Scheduler\Scheduler\bin\Debug\RestSharp.xml
+C:\Users\johnt\source\Schedule\Scheduler\Scheduler\obj\Debug\AccountWindow.g.cs
+C:\Users\johnt\source\Schedule\Scheduler\Scheduler\obj\Debug\MainWindow.g.cs
+C:\Users\johnt\source\Schedule\Scheduler\Scheduler\obj\Debug\MasterWindow.g.cs
+C:\Users\johnt\source\Schedule\Scheduler\Scheduler\obj\Debug\Views\Users\AddUsers.g.cs
+C:\Users\johnt\source\Schedule\Scheduler\Scheduler\obj\Debug\Views\Users\AllUsers.g.cs
+C:\Users\johnt\source\Schedule\Scheduler\Scheduler\obj\Debug\Views\Wards\IndexPage.g.cs
+C:\Users\johnt\source\Schedule\Scheduler\Scheduler\obj\Debug\App.g.cs
+C:\Users\johnt\source\Schedule\Scheduler\Scheduler\obj\Debug\Scheduler_MarkupCompile.cache
+C:\Users\johnt\source\Schedule\Scheduler\Scheduler\obj\Debug\Scheduler_MarkupCompile.lref
+C:\Users\johnt\source\Schedule\Scheduler\Scheduler\obj\Debug\App.baml
+C:\Users\johnt\source\Schedule\Scheduler\Scheduler\obj\Debug\AccountWindow.baml
+C:\Users\johnt\source\Schedule\Scheduler\Scheduler\obj\Debug\MainWindow.baml
+C:\Users\johnt\source\Schedule\Scheduler\Scheduler\obj\Debug\MasterWindow.baml
+C:\Users\johnt\source\Schedule\Scheduler\Scheduler\obj\Debug\Views\Users\AddUsers.baml
+C:\Users\johnt\source\Schedule\Scheduler\Scheduler\obj\Debug\Views\Users\AllUsers.baml
+C:\Users\johnt\source\Schedule\Scheduler\Scheduler\obj\Debug\Views\Wards\IndexPage.baml
+C:\Users\johnt\source\Schedule\Scheduler\Scheduler\obj\Debug\Scheduler.g.resources
+C:\Users\johnt\source\Schedule\Scheduler\Scheduler\obj\Debug\Scheduler.Properties.Resources.resources
+C:\Users\johnt\source\Schedule\Scheduler\Scheduler\obj\Debug\Scheduler.csproj.GenerateResource.cache
+C:\Users\johnt\source\Schedule\Scheduler\Scheduler\obj\Debug\Scheduler.csproj.CopyComplete
+C:\Users\johnt\source\Schedule\Scheduler\Scheduler\obj\Debug\Scheduler.exe
+C:\Users\johnt\source\Schedule\Scheduler\Scheduler\obj\Debug\Scheduler.pdb
+C:\Users\johnt\source\Schedule\Scheduler\Scheduler\obj\Debug\Views\Wards\EditWardWindow.g.cs
+C:\Users\johnt\source\Schedule\Scheduler\Scheduler\obj\Debug\Views\Wards\EditWardWindow.baml
+C:\Users\johnt\source\Schedule\Scheduler\Scheduler\obj\Debug\Views\Profile\AccountPage.g.cs
+C:\Users\johnt\source\Schedule\Scheduler\Scheduler\obj\Debug\Views\Profile\AccountPage.baml
+C:\Users\johnt\source\Schedule\Scheduler\Scheduler\obj\Debug\Scheduler.csprojAssemblyReference.cache
+C:\Users\johnt\source\Schedule\Scheduler\Scheduler\obj\Debug\Views\Profile\UpdateAccountPopUpWindow.g.cs
+C:\Users\johnt\source\Schedule\Scheduler\Scheduler\obj\Debug\Views\Profile\UpdateAccountPopUpWindow.baml
+C:\Users\johnt\source\Schedule\Scheduler\Scheduler\obj\Debug\Views\Shared\Loader.g.cs
+C:\Users\johnt\source\Schedule\Scheduler\Scheduler\obj\Debug\Views\Shared\Loader.baml
+C:\Users\johnt\source\Schedule\Scheduler\Scheduler\obj\Debug\Views\Wards\AllUser.g.cs
+C:\Users\johnt\source\Schedule\Scheduler\Scheduler\obj\Debug\Views\Wards\AllUser.baml
+C:\Users\johnt\source\Schedule\Scheduler\Scheduler\obj\Debug\Views\Home\IndexPage.g.cs
+C:\Users\johnt\source\Schedule\Scheduler\Scheduler\obj\Debug\Views\Home\IndexPage.baml
+C:\Users\johnt\source\Schedule\Scheduler\Scheduler\obj\Debug\Views\Shared\SuperUserLayout.g.cs
+C:\Users\johnt\source\Schedule\Scheduler\Scheduler\obj\Debug\Views\Shared\SuperUserLayout.baml
+C:\Users\johnt\source\Schedule\Scheduler\Scheduler\obj\Debug\Views\SuperUser\HealthFacility.g.cs
+C:\Users\johnt\source\Schedule\Scheduler\Scheduler\obj\Debug\Views\SuperUser\HealthFacility.baml
+C:\Users\johnt\source\Schedule\Scheduler\Scheduler\obj\Debug\Views\SuperUser\Dashboard.g.cs
+C:\Users\johnt\source\Schedule\Scheduler\Scheduler\obj\Debug\Views\SuperUser\Dashboard.baml
+C:\Users\johnt\source\Schedule\Scheduler\Scheduler\obj\Debug\Views\SuperUser\NewDirector.g.cs
+C:\Users\johnt\source\Schedule\Scheduler\Scheduler\obj\Debug\Views\SuperUser\NewDirector.baml
+C:\Users\my pc\source\Schedule\Scheduler\Scheduler\bin\Debug\Scheduler.exe.config
+C:\Users\my pc\source\Schedule\Scheduler\Scheduler\bin\Debug\Scheduler.exe
+C:\Users\my pc\source\Schedule\Scheduler\Scheduler\bin\Debug\Scheduler.pdb
+C:\Users\my pc\source\Schedule\Scheduler\Scheduler\bin\Debug\ControlzEx.dll
+C:\Users\my pc\source\Schedule\Scheduler\Scheduler\bin\Debug\MahApps.Metro.dll
+C:\Users\my pc\source\Schedule\Scheduler\Scheduler\bin\Debug\MaterialDesignColors.dll
+C:\Users\my pc\source\Schedule\Scheduler\Scheduler\bin\Debug\MaterialDesignThemes.MahApps.dll
+C:\Users\my pc\source\Schedule\Scheduler\Scheduler\bin\Debug\MaterialDesignThemes.Wpf.dll
+C:\Users\my pc\source\Schedule\Scheduler\Scheduler\bin\Debug\Newtonsoft.Json.dll
+C:\Users\my pc\source\Schedule\Scheduler\Scheduler\bin\Debug\RestSharp.dll
+C:\Users\my pc\source\Schedule\Scheduler\Scheduler\bin\Debug\System.Windows.Interactivity.dll
+C:\Users\my pc\source\Schedule\Scheduler\Scheduler\bin\Debug\ControlzEx.pdb
+C:\Users\my pc\source\Schedule\Scheduler\Scheduler\bin\Debug\MahApps.Metro.pdb
+C:\Users\my pc\source\Schedule\Scheduler\Scheduler\bin\Debug\MahApps.Metro.xml
+C:\Users\my pc\source\Schedule\Scheduler\Scheduler\bin\Debug\MaterialDesignThemes.Wpf.pdb
+C:\Users\my pc\source\Schedule\Scheduler\Scheduler\bin\Debug\MaterialDesignThemes.Wpf.xml
+C:\Users\my pc\source\Schedule\Scheduler\Scheduler\bin\Debug\Newtonsoft.Json.xml
+C:\Users\my pc\source\Schedule\Scheduler\Scheduler\bin\Debug\RestSharp.xml
+C:\Users\my pc\source\Schedule\Scheduler\Scheduler\obj\Debug\Scheduler.csprojAssemblyReference.cache
+C:\Users\my pc\source\Schedule\Scheduler\Scheduler\obj\Debug\AccountWindow.g.cs
+C:\Users\my pc\source\Schedule\Scheduler\Scheduler\obj\Debug\MainWindow.g.cs
+C:\Users\my pc\source\Schedule\Scheduler\Scheduler\obj\Debug\MasterWindow.g.cs
+C:\Users\my pc\source\Schedule\Scheduler\Scheduler\obj\Debug\Views\Home\IndexPage.g.cs
+C:\Users\my pc\source\Schedule\Scheduler\Scheduler\obj\Debug\Views\Profile\AccountPage.g.cs
+C:\Users\my pc\source\Schedule\Scheduler\Scheduler\obj\Debug\Views\Profile\UpdateAccountPopUpWindow.g.cs
+C:\Users\my pc\source\Schedule\Scheduler\Scheduler\obj\Debug\Views\Shared\Loader.g.cs
+C:\Users\my pc\source\Schedule\Scheduler\Scheduler\obj\Debug\Views\Shared\SuperUserLayout.g.cs
+C:\Users\my pc\source\Schedule\Scheduler\Scheduler\obj\Debug\Views\SuperUser\Dashboard.g.cs
+C:\Users\my pc\source\Schedule\Scheduler\Scheduler\obj\Debug\Views\SuperUser\HealthFacility.g.cs
+C:\Users\my pc\source\Schedule\Scheduler\Scheduler\obj\Debug\Views\SuperUser\NewDirector.g.cs
+C:\Users\my pc\source\Schedule\Scheduler\Scheduler\obj\Debug\Views\Users\AddUsers.g.cs
+C:\Users\my pc\source\Schedule\Scheduler\Scheduler\obj\Debug\Views\Users\AllUsers.g.cs
+C:\Users\my pc\source\Schedule\Scheduler\Scheduler\obj\Debug\Views\Wards\AllUser.g.cs
+C:\Users\my pc\source\Schedule\Scheduler\Scheduler\obj\Debug\Views\Wards\EditWardWindow.g.cs
+C:\Users\my pc\source\Schedule\Scheduler\Scheduler\obj\Debug\Views\Wards\IndexPage.g.cs
+C:\Users\my pc\source\Schedule\Scheduler\Scheduler\obj\Debug\App.g.cs
+C:\Users\my pc\source\Schedule\Scheduler\Scheduler\obj\Debug\Scheduler_MarkupCompile.cache
+C:\Users\my pc\source\Schedule\Scheduler\Scheduler\obj\Debug\Scheduler_MarkupCompile.lref
+C:\Users\my pc\source\Schedule\Scheduler\Scheduler\obj\Debug\App.baml
+C:\Users\my pc\source\Schedule\Scheduler\Scheduler\obj\Debug\AccountWindow.baml
+C:\Users\my pc\source\Schedule\Scheduler\Scheduler\obj\Debug\MainWindow.baml
+C:\Users\my pc\source\Schedule\Scheduler\Scheduler\obj\Debug\MasterWindow.baml
+C:\Users\my pc\source\Schedule\Scheduler\Scheduler\obj\Debug\Views\Home\IndexPage.baml
+C:\Users\my pc\source\Schedule\Scheduler\Scheduler\obj\Debug\Views\Profile\AccountPage.baml
+C:\Users\my pc\source\Schedule\Scheduler\Scheduler\obj\Debug\Views\Profile\UpdateAccountPopUpWindow.baml
+C:\Users\my pc\source\Schedule\Scheduler\Scheduler\obj\Debug\Views\Shared\Loader.baml
+C:\Users\my pc\source\Schedule\Scheduler\Scheduler\obj\Debug\Views\Shared\SuperUserLayout.baml
+C:\Users\my pc\source\Schedule\Scheduler\Scheduler\obj\Debug\Views\SuperUser\Dashboard.baml
+C:\Users\my pc\source\Schedule\Scheduler\Scheduler\obj\Debug\Views\SuperUser\HealthFacility.baml
+C:\Users\my pc\source\Schedule\Scheduler\Scheduler\obj\Debug\Views\SuperUser\NewDirector.baml
+C:\Users\my pc\source\Schedule\Scheduler\Scheduler\obj\Debug\Views\Users\AddUsers.baml
+C:\Users\my pc\source\Schedule\Scheduler\Scheduler\obj\Debug\Views\Users\AllUsers.baml
+C:\Users\my pc\source\Schedule\Scheduler\Scheduler\obj\Debug\Views\Wards\AllUser.baml
+C:\Users\my pc\source\Schedule\Scheduler\Scheduler\obj\Debug\Views\Wards\EditWardWindow.baml
+C:\Users\my pc\source\Schedule\Scheduler\Scheduler\obj\Debug\Views\Wards\IndexPage.baml
+C:\Users\my pc\source\Schedule\Scheduler\Scheduler\obj\Debug\Scheduler.g.resources
+C:\Users\my pc\source\Schedule\Scheduler\Scheduler\obj\Debug\Scheduler.Properties.Resources.resources
+C:\Users\my pc\source\Schedule\Scheduler\Scheduler\obj\Debug\Scheduler.csproj.GenerateResource.cache
+C:\Users\my pc\source\Schedule\Scheduler\Scheduler\obj\Debug\Scheduler.csproj.CoreCompileInputs.cache
+C:\Users\my pc\source\Schedule\Scheduler\Scheduler\obj\Debug\Scheduler.csproj.CopyComplete
+C:\Users\my pc\source\Schedule\Scheduler\Scheduler\obj\Debug\Scheduler.exe
+C:\Users\my pc\source\Schedule\Scheduler\Scheduler\obj\Debug\Scheduler.pdb

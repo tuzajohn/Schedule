@@ -1,0 +1,187 @@
+﻿<Window x:Class="Scheduler.MasterWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Scheduler"
+        mc:Ignorable="d"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        Title="MasterWindow" Background="#ff5131">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+
+        <materialDesign:ColorZone Grid.ColumnSpan="2" Grid.Row="0"
+                                  Mode="PrimaryMid"
+                                  Padding="16">
+            
+            <DockPanel>
+
+                <materialDesign:PopupBox DockPanel.Dock="Right" PlacementMode="BottomAndAlignRightEdges">
+                    <ListBox Width="200">
+                        <ListBoxItem>
+                            <TextBlock>
+                                <materialDesign:PackIcon Kind="SettingsApplications"/>
+                                Settings
+                            </TextBlock>
+                        </ListBoxItem>
+                        <ListBoxItem>
+                            Nice Popup
+                        </ListBoxItem>
+                        <ListBoxItem Selected="SignOutBtn_Click">
+                            <TextBlock> 
+                                <materialDesign:PackIcon Kind="LogoutVariant"/>
+                                Sign Out
+                            </TextBlock>
+                            
+                        </ListBoxItem>
+                    </ListBox>
+                </materialDesign:PopupBox>
+                <TextBlock Text="time" x:Name="TimerTick" FontWeight="Bold"
+                           VerticalAlignment="Center" DockPanel.Dock="Right" />
+                <StackPanel Orientation="Horizontal"
+                            materialDesign:RippleAssist.IsCentered="True">
+                    <materialDesign:ColorZone Mode="Standard" Padding="8 4 8 4"
+                                              CornerRadius="2"
+                                              Panel.ZIndex="1"
+                                              Margin="16 0 0 0"
+                                              materialDesign:ShadowAssist.ShadowDepth="Depth1">
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto" />
+                                <ColumnDefinition Width="*" />
+                                <ColumnDefinition Width="Auto" />
+                            </Grid.ColumnDefinitions>
+                            <Button Style="{DynamicResource MaterialDesignToolButton}">
+                                <materialDesign:PackIcon Kind="Magnify"
+                                                         Opacity=".56" />
+                            </Button>
+                            <TextBox Grid.Column="1" Margin="8 0 0 0"
+                                     materialDesign:HintAssist.Hint="Build a search bar"
+                                     materialDesign:TextFieldAssist.DecorationVisibility="Hidden"
+                                     BorderThickness="0" MinWidth="200"
+                                     VerticalAlignment="Center" />
+                            <Button Style="{DynamicResource MaterialDesignToolButton}" Grid.Column="2">
+                                <materialDesign:PackIcon Kind="Microphone" Opacity=".56"
+                                                         Margin="8 0 0 0" />
+                            </Button>
+                        </Grid>
+                    </materialDesign:ColorZone>
+                    <Button Style="{DynamicResource MaterialDesignToolForegroundButton}"
+                            Margin="8 0 0 0" Panel.ZIndex="0">
+                        <materialDesign:PackIcon Kind="Send" />
+                    </Button>
+                    <Button Style="{DynamicResource MaterialDesignToolForegroundButton}" Margin="8 0 0 0"
+                            Panel.ZIndex="0" ToolTip="New User" 
+                            Name="AddUserBtn" Visibility="Collapsed" 
+                            Click="AddUserBtn_Click">
+                        <TextBlock>
+                            <materialDesign:PackIcon Kind="Add"  />
+                            Add New User
+                        </TextBlock>
+                    </Button>
+                    <Button Style="{DynamicResource MaterialDesignToolForegroundButton}" Margin="8 0 0 0"
+                            Panel.ZIndex="0" ToolTip="Cancel" 
+                            x:Name="CancelAddUserBtn" 
+                            Click="CancelAddUserBtn_Click" 
+                            Visibility="Collapsed">
+                        <TextBlock>
+                            <materialDesign:PackIcon Kind="Cancel"  />
+                            Camcel
+                        </TextBlock>
+                    </Button>
+                </StackPanel>
+            </DockPanel>
+        </materialDesign:ColorZone>
+
+
+        <Grid Grid.Column="0" Margin="0" Grid.Row="1">
+
+            <StackPanel Margin="10 0" >
+                <materialDesign:Chip Content="Twitter" HorizontalAlignment="Stretch"
+                                     Name="AccountData"
+                                     Background="#ff8a65"
+                                     Foreground="White" FontWeight="Bold"
+                                     IconBackground="{DynamicResource PrimaryHueDarkBrush}"
+                                     IconForeground="{DynamicResource PrimaryHueDarkForegroundBrush}">
+                    <materialDesign:Chip.Icon>
+                        <materialDesign:PackIcon Kind="Account"/>
+                    </materialDesign:Chip.Icon>
+                </materialDesign:Chip>
+                <Button Style="{StaticResource MaterialDesignRaisedLightButton}"
+                        Margin="0 10 0 0" VerticalAlignment="Top" 
+                        HorizontalContentAlignment="Left"
+                        ToolTip="Home" Name="HomeBtn" Click="HomeBtn_Click"
+                        materialDesign:ShadowAssist.ShadowDepth="Depth4"
+                        materialDesign:RippleAssist.Feedback="#DD000000"
+                        HorizontalAlignment="Stretch">
+                    <TextBlock> <materialDesign:PackIcon Kind="HomeVariantOutline" /> Home</TextBlock>
+            </Button>
+            
+            <Button Style="{StaticResource MaterialDesignRaisedLightButton}"
+                    Margin="0 5 0 0"
+                    VerticalAlignment="Top"
+                    ToolTip="Account" Name="AccountPageBtn"
+                    Click="AccountPageBtn_Click" HorizontalContentAlignment="Left"
+                    materialDesign:ShadowAssist.ShadowDepth="Depth4"
+                    materialDesign:RippleAssist.Feedback="#DD000000"
+                    HorizontalAlignment="Stretch">
+                    <TextBlock> <materialDesign:PackIcon Kind="AccountDetails" /> My Account</TextBlock>
+            </Button>
+            
+            <Button Style="{StaticResource MaterialDesignRaisedLightButton}"
+                    Margin="0 5 0 0"
+                    VerticalAlignment="Top"
+                    ToolTip="Wards" Name="WardPageBtn"
+                    Click="WardPageBtn_Click" HorizontalContentAlignment="Left"
+                    materialDesign:ShadowAssist.ShadowDepth="Depth4"
+                    materialDesign:RippleAssist.Feedback="#DD000000"
+                    HorizontalAlignment="Stretch">
+                    <TextBlock TextAlignment="Left"><materialDesign:PackIcon Kind="Hospital" /> Ward</TextBlock>
+            </Button>
+            
+            <Button Style="{StaticResource MaterialDesignRaisedLightButton}"
+                    Margin="0 5 0 0"
+                    VerticalAlignment="Top"
+                    ToolTip="Users" Name="UserPageBtn"
+                    Click="UserPageBtn_Click" HorizontalContentAlignment="Left"
+                    materialDesign:ShadowAssist.ShadowDepth="Depth4"
+                    materialDesign:RippleAssist.Feedback="#DD000000"
+                    HorizontalAlignment="Stretch">
+
+                    <TextBlock> <materialDesign:PackIcon Kind="AccountGroupOutline" /> Users</TextBlock>
+                </Button>
+            
+            <Button Style="{StaticResource MaterialDesignRaisedLightButton}"
+                    Margin="0 5 0 0"
+                    VerticalAlignment="Top"
+                    ToolTip="Sign Out" Name="SignOutBtn"
+                    Click="SignOutBtn_Click" HorizontalContentAlignment="Left"
+                    materialDesign:ShadowAssist.ShadowDepth="Depth4"
+                    materialDesign:RippleAssist.Feedback="#DD000000"
+                    HorizontalAlignment="Stretch">
+
+                    <TextBlock> <materialDesign:PackIcon Kind="Logout" /> Sign Out</TextBlock>
+                </Button>
+            </StackPanel>
+            
+            
+        </Grid>
+
+        <DockPanel Grid.Column="1" Grid.Row="1"  Background="#ffffff">
+            <Frame Margin="10" NavigationUIVisibility="Hidden" x:Name="controlInstance">
+
+            </Frame>
+        </DockPanel>
+
+
+    </Grid>
+</Window>

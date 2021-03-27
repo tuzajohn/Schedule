@@ -1,0 +1,94 @@
+﻿<Window x:Class="Scheduler.Views.Wards.EditWardWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Scheduler.Views.Wards"
+        mc:Ignorable="d"
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        Title="EditWardWindow" Height="280" Width="500" WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Button.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.ListBox.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.PopupBox.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.RadioButton.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.TextBlock.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.ToggleButton.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.DialogHost.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Flipper.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+            <BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter" />
+
+        </ResourceDictionary>
+    </Window.Resources>
+    <Grid>
+        <materialDesign:Card Background="#03a9f4" Foreground="{DynamicResource PrimaryHueDarkForegroundBrush}"
+                             Padding="0" Width="auto" VerticalAlignment="Stretch" VerticalContentAlignment="Center">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                    <RowDefinition Height="Auto" />
+                </Grid.RowDefinitions>
+                <TextBox Grid.Row="0" Name="WardName" Margin="16 16 16 4" FontSize="20">
+                    Call Jennifer
+                </TextBox>
+                <TextBox Grid.Row="1" Name="WardDescription" Margin="16 16 16 4" FontSize="15">
+                    Call Jennifer
+                </TextBox>
+
+                <StackPanel Grid.Row="2">
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width=".5*"/>
+                            <ColumnDefinition Width=".5*"/>
+                        </Grid.ColumnDefinitions>
+                        
+                        <ComboBox materialDesign:HintAssist.Hint="Maximum Hours" 
+                          x:Name="MaxHours" Grid.Column="0" Margin="16 0 5 0"
+                          materialDesign:HintAssist.HintOpacity=".26"
+                          Style="{StaticResource MaterialDesignFloatingHintComboBox}"/>
+
+                        <ComboBox materialDesign:HintAssist.Hint="Minimum Hours" 
+                          x:Name="MinHours" Grid.Column="1" Margin="5 0 16 0"
+                          materialDesign:HintAssist.HintOpacity=".26"
+                          Style="{StaticResource MaterialDesignFloatingHintComboBox}"/>
+                    </Grid>
+                    
+                </StackPanel>
+
+                <ComboBox materialDesign:HintAssist.Hint="InCharge" 
+                          x:Name="InchargeBox" Grid.Row="3" Margin="16 0"
+                          materialDesign:HintAssist.HintOpacity=".26"
+                          Style="{StaticResource MaterialDesignFloatingHintComboBox}"/>
+
+
+
+
+                <Separator Grid.Row="4" Style="{StaticResource MaterialDesignLightSeparator}" />
+                <TextBlock Grid.Row="5" Margin="16 0 16 8" VerticalAlignment="Center" HorizontalAlignment="Left" Name="TimeBlock"
+                           Style="{StaticResource MaterialDesignBody2TextBlock}"> 
+                    March 19, 2016
+                </TextBlock>
+                
+                <StackPanel Grid.Row="5" Orientation="Horizontal" Margin="16 0 16 8"
+                            HorizontalAlignment="Right">
+                    <Button HorizontalAlignment="Right" Style="{StaticResource MaterialDesignToolForegroundButton}" Width="30"
+                            Padding="2 0 2 0" materialDesign:RippleAssist.IsCentered="True" Name="SaveBtn" Click="SaveBtn_Click">
+                        <materialDesign:PackIcon Kind="Edit" />
+                    </Button>
+
+                    <!--<Button HorizontalAlignment="Right" Style="{StaticResource MaterialDesignToolForegroundButton}" Width="30"
+                            Padding="2 0 2 0" materialDesign:RippleAssist.IsCentered="True" Name="DeleteBtn" Click="DeleteBtn_Click">
+                        <materialDesign:PackIcon Kind="Trash" />
+                    </Button>-->
+                </StackPanel>
+            </Grid>
+        </materialDesign:Card>
+    </Grid>
+</Window>

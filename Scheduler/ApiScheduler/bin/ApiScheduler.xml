@@ -1,0 +1,526 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ApiScheduler</name>
+    </assembly>
+    <members>
+        <member name="T:ApiScheduler.SwaggerConfig">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:ApiScheduler.SwaggerConfig.Register">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:ApiScheduler.Controllers.AccountController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:ApiScheduler.Controllers.AccountController.Login(System.String,System.String)">
+            <summary>
+            Used to signin users
+            </summary>
+            <param name="email"></param>
+            <param name="password"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ApiScheduler.Controllers.AccountController.SaveAccount(System.String,System.String,System.String)">
+            <summary>
+            Saves an account
+            </summary>
+            <param name="email"></param>
+            <param name="password"></param>
+            <returns>200</returns>
+        </member>
+        <member name="M:ApiScheduler.Controllers.AccountController.UpdateAccount(System.String,System.String)">
+            <summary>
+            Update password
+            </summary>
+            <param name="id">Account Id</param>
+            <param name="newpassword">New Password</param>
+            <returns></returns>
+        </member>
+        <member name="T:ApiScheduler.Controllers.DivisionController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:ApiScheduler.Controllers.DivisionController.Get">
+            <summary>
+            Fetches all divisions
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ApiScheduler.Controllers.DivisionController.GetDivision(System.String)">
+            <summary>
+            Fetch a single division
+            </summary>
+            <param name="id">division id</param>
+            <returns></returns>
+        </member>
+        <member name="M:ApiScheduler.Controllers.DivisionController.CreateDivision(System.String)">
+            <summary>
+            Creates a new division
+            </summary>
+            <param name="name">Name of the division</param>
+            <returns></returns>
+        </member>
+        <member name="M:ApiScheduler.Controllers.DivisionController.GetWards(System.String)">
+            <summary>
+            Get wards by division id
+            </summary>
+            <param name="id">division id</param>
+            <returns></returns>
+        </member>
+        <member name="M:ApiScheduler.Controllers.DivisionController.UpdateDivision(System.String,System.String)">
+            <summary>
+            Updates a division
+            </summary>
+            <param name="id">division id</param>
+            <param name="name">division name</param>
+            <returns></returns>
+        </member>
+        <member name="M:ApiScheduler.Controllers.DivisionController.Delete(System.String)">
+            <summary>
+            Deletes a certain division
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ApiScheduler.Controllers.ShiftController.SetShift(ApiScheduler.Controllers.ShiftPost)">
+            <summary>
+            Set shifts for an individual
+            </summary>
+            <param name="shift">Shift object</param>
+            <returns></returns>
+        </member>
+        <member name="M:ApiScheduler.Controllers.ShiftController.GetShift(System.String)">
+            <summary>
+            Gets one shift
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ApiScheduler.Controllers.ShiftController.GetShiftByWardId(System.String)">
+            <summary>
+            Get the sole shft of ward
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ApiScheduler.Controllers.ShiftController.GetShiftByUsId(System.String)">
+            <summary>
+            Gets the sole shift of an individual
+            </summary>
+            <param name="id">User id</param>
+            <returns></returns>
+        </member>
+        <member name="M:ApiScheduler.Controllers.UserController.AddUser(ApiScheduler.Models.User)">
+            <summary>
+            Add new user
+            </summary>
+            <param name="user">user to be added</param>
+            <returns></returns>
+        </member>
+        <member name="M:ApiScheduler.Controllers.UserController.UpdateUser(System.String,ApiScheduler.Models.User)">
+            <summary>
+            Update a user
+            </summary>
+            <param name="id">user id</param>
+            <param name="user">user data</param>
+            <returns></returns>
+        </member>
+        <member name="M:ApiScheduler.Controllers.UserController.GetUserByAccountId(System.String)">
+            <summary>
+            Get user using the account id
+            </summary>
+            <param name="id">account id</param>
+            <returns></returns>
+        </member>
+        <member name="M:ApiScheduler.Controllers.UserController.GetUserByUserId(System.String)">
+            <summary>
+            Get user using user id
+            </summary>
+            <param name="id">user id</param>
+            <returns></returns>
+        </member>
+        <member name="M:ApiScheduler.Controllers.UserController.Users">
+            <summary>
+            Fetches all users
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ApiScheduler.Controllers.WardController.AddWard(ApiScheduler.Controllers.WardViewModel)">
+            <summary>
+            Add new ward
+            </summary>
+            <param name="ward">Ward Id</param>
+            <returns></returns>
+        </member>
+        <member name="M:ApiScheduler.Controllers.WardController.GetWard(System.String)">
+            <summary>
+            Get a ward by ward id
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ApiScheduler.Controllers.WardController.GetUsersForWard(System.String)">
+            <summary>
+            Fetches all personells under one ward
+            </summary>
+            <param name="id">Ward Id</param>
+            <returns></returns>
+        </member>
+        <member name="M:ApiScheduler.Controllers.WardController.GetAllWards">
+            <summary>
+            Fetches all wards
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ApiScheduler.Controllers.WardController.UpdateWard(System.String,ApiScheduler.Controllers.WardViewModel)">
+            <summary>
+            Update certain ward details
+            </summary>
+            <param name="id">Ward Id</param>
+            <param name="ward">Ward Data</param>
+            <returns></returns>
+        </member>
+        <member name="T:ApiScheduler.Controllers.WardViewModel">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:ApiScheduler.Controllers.WardViewModel.Name">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:ApiScheduler.Controllers.WardViewModel.InChargeId">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:ApiScheduler.Controllers.WardViewModel.DivisionId">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:ApiScheduler.Controllers.WardViewModel.Description">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:ApiScheduler.Controllers.WardViewModel.MinimunHoursAday">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:ApiScheduler.Controllers.WardViewModel.MaximumHoursAday">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:ApiScheduler.Controllers.WardViewModel.NumberOfWorkers">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:ApiScheduler.Models.Division">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:ApiScheduler.Models.Division.Id">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:ApiScheduler.Models.Division.Name">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:ApiScheduler.Models.Division.CreatedOn">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:ApiScheduler.Models.Shift">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:ApiScheduler.Models.Shift.Id">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:ApiScheduler.Models.Shift.UserId">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:ApiScheduler.Models.Shift.WardId">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:ApiScheduler.Models.Shift.StartTime">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:ApiScheduler.Models.Shift.EndTime">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:ApiScheduler.Models.Shift.StartDay">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:ApiScheduler.Models.Shift.CreatedOn">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:ApiScheduler.Models.Shift.IsDeleted">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:ApiScheduler.Models.HistoryShift">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:ApiScheduler.Models.HistoryShift.Id">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:ApiScheduler.Models.HistoryShift.ShiftId">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:ApiScheduler.Models.HistoryShift.UserId">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:ApiScheduler.Models.HistoryShift.WardId">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:ApiScheduler.Models.HistoryShift.StartTime">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:ApiScheduler.Models.HistoryShift.EndTime">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:ApiScheduler.Models.HistoryShift.StartDay">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:ApiScheduler.Models.HistoryShift.EndDay">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:ApiScheduler.Models.HistoryShift.CreatedOn">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:ApiScheduler.Models.User">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:ApiScheduler.Models.User.Id">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:ApiScheduler.Models.User.AccountId">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:ApiScheduler.Models.User.WardId">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:ApiScheduler.Models.User.FirstName">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:ApiScheduler.Models.User.LastName">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:ApiScheduler.Models.User.Email">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:ApiScheduler.Models.User.Contact">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:ApiScheduler.Models.User.Gender">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:ApiScheduler.Models.User.MedicalIssues">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:ApiScheduler.Models.User.MaritalStatus">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:ApiScheduler.Models.User.Profession">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:ApiScheduler.Models.User.Address">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:ApiScheduler.Models.User.DoB">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:ApiScheduler.Models.User.CreatedOn">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:ApiScheduler.Models.Ward">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:ApiScheduler.Models.Ward.Id">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:ApiScheduler.Models.Ward.DivisionId">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:ApiScheduler.Models.Ward.InchargeId">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:ApiScheduler.Models.Ward.Name">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:ApiScheduler.Models.Ward.Description">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:ApiScheduler.Models.Ward.NumberOfWorkers">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:ApiScheduler.Models.Ward.MinimunHoursAday">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:ApiScheduler.Models.Ward.MaximumHoursAday">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:ApiScheduler.Models.Ward.CreatedOn">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:ApiScheduler.Services.DivisionService">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:ApiScheduler.Services.ShiftService">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:ApiScheduler.Services.WardService">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:ApiScheduler.Services.WardService.#ctor">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:ApiScheduler.Services.WardService.Add(ApiScheduler.Models.Ward)">
+            <summary>
+            
+            </summary>
+            <param name="ward"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ApiScheduler.Services.WardService.Delete(ApiScheduler.Models.Ward)">
+            <summary>
+            
+            </summary>
+            <param name="ward"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ApiScheduler.Services.WardService.Get(System.String)">
+            <summary>
+            
+            </summary>
+            <param name="id"></param>
+            <returns></returns>
+        </member>
+        <member name="M:ApiScheduler.Services.WardService.Get">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:ApiScheduler.Services.WardService.Update(ApiScheduler.Models.Ward)">
+            <summary>
+            
+            </summary>
+            <param name="ward"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,194 @@
+C:\Users\john tuza sylver\source\Schedule\Scheduler\ApiScheduler\bin\ApiScheduler.dll.config
+C:\Users\john tuza sylver\source\Schedule\Scheduler\ApiScheduler\bin\ApiScheduler.dll
+C:\Users\john tuza sylver\source\Schedule\Scheduler\ApiScheduler\bin\ApiScheduler.pdb
+C:\Users\john tuza sylver\source\Schedule\Scheduler\ApiScheduler\bin\roslyn\csc.exe
+C:\Users\john tuza sylver\source\Schedule\Scheduler\ApiScheduler\bin\roslyn\csc.exe.config
+C:\Users\john tuza sylver\source\Schedule\Scheduler\ApiScheduler\bin\roslyn\csc.rsp
+C:\Users\john tuza sylver\source\Schedule\Scheduler\ApiScheduler\bin\roslyn\csi.exe
+C:\Users\john tuza sylver\source\Schedule\Scheduler\ApiScheduler\bin\roslyn\csi.exe.config
+C:\Users\john tuza sylver\source\Schedule\Scheduler\ApiScheduler\bin\roslyn\csi.rsp
+C:\Users\john tuza sylver\source\Schedule\Scheduler\ApiScheduler\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\john tuza sylver\source\Schedule\Scheduler\ApiScheduler\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\john tuza sylver\source\Schedule\Scheduler\ApiScheduler\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\john tuza sylver\source\Schedule\Scheduler\ApiScheduler\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\john tuza sylver\source\Schedule\Scheduler\ApiScheduler\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\john tuza sylver\source\Schedule\Scheduler\ApiScheduler\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\john tuza sylver\source\Schedule\Scheduler\ApiScheduler\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\john tuza sylver\source\Schedule\Scheduler\ApiScheduler\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\john tuza sylver\source\Schedule\Scheduler\ApiScheduler\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\john tuza sylver\source\Schedule\Scheduler\ApiScheduler\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\john tuza sylver\source\Schedule\Scheduler\ApiScheduler\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\john tuza sylver\source\Schedule\Scheduler\ApiScheduler\bin\roslyn\System.AppContext.dll
+C:\Users\john tuza sylver\source\Schedule\Scheduler\ApiScheduler\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\john tuza sylver\source\Schedule\Scheduler\ApiScheduler\bin\roslyn\System.Console.dll
+C:\Users\john tuza sylver\source\Schedule\Scheduler\ApiScheduler\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\john tuza sylver\source\Schedule\Scheduler\ApiScheduler\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\john tuza sylver\source\Schedule\Scheduler\ApiScheduler\bin\roslyn\System.IO.Compression.dll
+C:\Users\john tuza sylver\source\Schedule\Scheduler\ApiScheduler\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\john tuza sylver\source\Schedule\Scheduler\ApiScheduler\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\john tuza sylver\source\Schedule\Scheduler\ApiScheduler\bin\roslyn\System.IO.Pipes.AccessControl.dll
+C:\Users\john tuza sylver\source\Schedule\Scheduler\ApiScheduler\bin\roslyn\System.IO.Pipes.dll
+C:\Users\john tuza sylver\source\Schedule\Scheduler\ApiScheduler\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\john tuza sylver\source\Schedule\Scheduler\ApiScheduler\bin\roslyn\System.Security.AccessControl.dll
+C:\Users\john tuza sylver\source\Schedule\Scheduler\ApiScheduler\bin\roslyn\System.Security.Claims.dll
+C:\Users\john tuza sylver\source\Schedule\Scheduler\ApiScheduler\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\john tuza sylver\source\Schedule\Scheduler\ApiScheduler\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\john tuza sylver\source\Schedule\Scheduler\ApiScheduler\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\john tuza sylver\source\Schedule\Scheduler\ApiScheduler\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\john tuza sylver\source\Schedule\Scheduler\ApiScheduler\bin\roslyn\System.Security.Principal.Windows.dll
+C:\Users\john tuza sylver\source\Schedule\Scheduler\ApiScheduler\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\john tuza sylver\source\Schedule\Scheduler\ApiScheduler\bin\roslyn\System.ValueTuple.dll
+C:\Users\john tuza sylver\source\Schedule\Scheduler\ApiScheduler\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\john tuza sylver\source\Schedule\Scheduler\ApiScheduler\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\john tuza sylver\source\Schedule\Scheduler\ApiScheduler\bin\roslyn\System.Xml.XPath.dll
+C:\Users\john tuza sylver\source\Schedule\Scheduler\ApiScheduler\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\john tuza sylver\source\Schedule\Scheduler\ApiScheduler\bin\roslyn\vbc.exe
+C:\Users\john tuza sylver\source\Schedule\Scheduler\ApiScheduler\bin\roslyn\vbc.exe.config
+C:\Users\john tuza sylver\source\Schedule\Scheduler\ApiScheduler\bin\roslyn\vbc.rsp
+C:\Users\john tuza sylver\source\Schedule\Scheduler\ApiScheduler\bin\roslyn\VBCSCompiler.exe
+C:\Users\john tuza sylver\source\Schedule\Scheduler\ApiScheduler\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\john tuza sylver\source\Schedule\Scheduler\ApiScheduler\bin\Antlr3.Runtime.dll
+C:\Users\john tuza sylver\source\Schedule\Scheduler\ApiScheduler\bin\EntityFramework.dll
+C:\Users\john tuza sylver\source\Schedule\Scheduler\ApiScheduler\bin\EntityFramework.SqlServer.dll
+C:\Users\john tuza sylver\source\Schedule\Scheduler\ApiScheduler\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\john tuza sylver\source\Schedule\Scheduler\ApiScheduler\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\john tuza sylver\source\Schedule\Scheduler\ApiScheduler\bin\Newtonsoft.Json.dll
+C:\Users\john tuza sylver\source\Schedule\Scheduler\ApiScheduler\bin\System.Net.Http.Formatting.dll
+C:\Users\john tuza sylver\source\Schedule\Scheduler\ApiScheduler\bin\System.Web.Helpers.dll
+C:\Users\john tuza sylver\source\Schedule\Scheduler\ApiScheduler\bin\System.Web.Http.dll
+C:\Users\john tuza sylver\source\Schedule\Scheduler\ApiScheduler\bin\System.Web.Http.WebHost.dll
+C:\Users\john tuza sylver\source\Schedule\Scheduler\ApiScheduler\bin\System.Web.Mvc.dll
+C:\Users\john tuza sylver\source\Schedule\Scheduler\ApiScheduler\bin\System.Web.Optimization.dll
+C:\Users\john tuza sylver\source\Schedule\Scheduler\ApiScheduler\bin\System.Web.Razor.dll
+C:\Users\john tuza sylver\source\Schedule\Scheduler\ApiScheduler\bin\System.Web.WebPages.Deployment.dll
+C:\Users\john tuza sylver\source\Schedule\Scheduler\ApiScheduler\bin\System.Web.WebPages.dll
+C:\Users\john tuza sylver\source\Schedule\Scheduler\ApiScheduler\bin\System.Web.WebPages.Razor.dll
+C:\Users\john tuza sylver\source\Schedule\Scheduler\ApiScheduler\bin\WebGrease.dll
+C:\Users\john tuza sylver\source\Schedule\Scheduler\ApiScheduler\bin\Antlr3.Runtime.pdb
+C:\Users\john tuza sylver\source\Schedule\Scheduler\ApiScheduler\bin\EntityFramework.xml
+C:\Users\john tuza sylver\source\Schedule\Scheduler\ApiScheduler\bin\EntityFramework.SqlServer.xml
+C:\Users\john tuza sylver\source\Schedule\Scheduler\ApiScheduler\bin\System.Web.Helpers.xml
+C:\Users\john tuza sylver\source\Schedule\Scheduler\ApiScheduler\bin\System.Web.Mvc.xml
+C:\Users\john tuza sylver\source\Schedule\Scheduler\ApiScheduler\bin\System.Web.Optimization.xml
+C:\Users\john tuza sylver\source\Schedule\Scheduler\ApiScheduler\bin\System.Web.Razor.xml
+C:\Users\john tuza sylver\source\Schedule\Scheduler\ApiScheduler\bin\System.Web.WebPages.xml
+C:\Users\john tuza sylver\source\Schedule\Scheduler\ApiScheduler\bin\System.Web.WebPages.Deployment.xml
+C:\Users\john tuza sylver\source\Schedule\Scheduler\ApiScheduler\bin\System.Web.WebPages.Razor.xml
+C:\Users\john tuza sylver\source\Schedule\Scheduler\ApiScheduler\bin\Newtonsoft.Json.xml
+C:\Users\john tuza sylver\source\Schedule\Scheduler\ApiScheduler\bin\System.Net.Http.Formatting.xml
+C:\Users\john tuza sylver\source\Schedule\Scheduler\ApiScheduler\bin\System.Web.Http.xml
+C:\Users\john tuza sylver\source\Schedule\Scheduler\ApiScheduler\bin\System.Web.Http.WebHost.xml
+C:\Users\john tuza sylver\source\Schedule\Scheduler\ApiScheduler\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\john tuza sylver\source\Schedule\Scheduler\ApiScheduler\obj\Release\ApiScheduler.csprojAssemblyReference.cache
+C:\Users\john tuza sylver\source\Schedule\Scheduler\ApiScheduler\obj\Release\ApiScheduler.Migrations.init.resources
+C:\Users\john tuza sylver\source\Schedule\Scheduler\ApiScheduler\obj\Release\ApiScheduler.Migrations.new_init.resources
+C:\Users\john tuza sylver\source\Schedule\Scheduler\ApiScheduler\obj\Release\ApiScheduler.Migrations.new_contact_user.resources
+C:\Users\john tuza sylver\source\Schedule\Scheduler\ApiScheduler\obj\Release\ApiScheduler.csproj.GenerateResource.cache
+C:\Users\john tuza sylver\source\Schedule\Scheduler\ApiScheduler\obj\Release\ApiScheduler.csproj.CoreCompileInputs.cache
+C:\Users\john tuza sylver\source\Schedule\Scheduler\ApiScheduler\obj\Release\ApiScheduler.csproj.CopyComplete
+C:\Users\john tuza sylver\source\Schedule\Scheduler\ApiScheduler\obj\Release\ApiScheduler.dll
+C:\Users\john tuza sylver\source\Schedule\Scheduler\ApiScheduler\obj\Release\ApiScheduler.pdb
+C:\Users\john tuza sylver\source\Schedule\Scheduler\ApiScheduler\bin\Swashbuckle.Core.dll
+C:\Users\john tuza sylver\source\Schedule\Scheduler\ApiScheduler\bin\WebActivatorEx.dll
+C:\Users\john tuza sylver\source\Schedule\Scheduler\ApiScheduler\bin\ApiScheduler.xml
+C:\Users\john tuza sylver\source\Schedule\Scheduler\ApiScheduler\bin\FromHeaderAttribute.dll
+C:\Users\john tuza sylver\source\Schedule\Scheduler\ApiScheduler\bin\Swagger.Net.dll
+C:\Users\john tuza sylver\source\Schedule\Scheduler\ApiScheduler\obj\Release\ApiScheduler.Migrations.ward_migrate.resources
+C:\Users\john tuza sylver\source\Schedule\Scheduler\ApiScheduler\obj\Release\ApiScheduler.Migrations.ward_update.resources
+C:\Users\john tuza sylver\source\Schedule\Scheduler\ApiScheduler\obj\Release\ApiScheduler.Migrations.user_update.resources
+C:\Users\john tuza sylver\source\Schedule\Scheduler\ApiScheduler\obj\Release\ApiScheduler.Migrations.division.resources
+C:\Users\johnt\source\Schedule\Scheduler\ApiScheduler\bin\ApiScheduler.dll.config
+C:\Users\johnt\source\Schedule\Scheduler\ApiScheduler\bin\ApiScheduler.xml
+C:\Users\johnt\source\Schedule\Scheduler\ApiScheduler\bin\ApiScheduler.dll
+C:\Users\johnt\source\Schedule\Scheduler\ApiScheduler\bin\ApiScheduler.pdb
+C:\Users\johnt\source\Schedule\Scheduler\ApiScheduler\bin\roslyn\csc.exe
+C:\Users\johnt\source\Schedule\Scheduler\ApiScheduler\bin\roslyn\csc.exe.config
+C:\Users\johnt\source\Schedule\Scheduler\ApiScheduler\bin\roslyn\csc.rsp
+C:\Users\johnt\source\Schedule\Scheduler\ApiScheduler\bin\roslyn\csi.exe
+C:\Users\johnt\source\Schedule\Scheduler\ApiScheduler\bin\roslyn\csi.exe.config
+C:\Users\johnt\source\Schedule\Scheduler\ApiScheduler\bin\roslyn\csi.rsp
+C:\Users\johnt\source\Schedule\Scheduler\ApiScheduler\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\johnt\source\Schedule\Scheduler\ApiScheduler\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\johnt\source\Schedule\Scheduler\ApiScheduler\bin\roslyn\Microsoft.CodeAnalysis.CSharp.Scripting.dll
+C:\Users\johnt\source\Schedule\Scheduler\ApiScheduler\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\johnt\source\Schedule\Scheduler\ApiScheduler\bin\roslyn\Microsoft.CodeAnalysis.Scripting.dll
+C:\Users\johnt\source\Schedule\Scheduler\ApiScheduler\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\johnt\source\Schedule\Scheduler\ApiScheduler\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\johnt\source\Schedule\Scheduler\ApiScheduler\bin\roslyn\Microsoft.DiaSymReader.Native.amd64.dll
+C:\Users\johnt\source\Schedule\Scheduler\ApiScheduler\bin\roslyn\Microsoft.DiaSymReader.Native.x86.dll
+C:\Users\johnt\source\Schedule\Scheduler\ApiScheduler\bin\roslyn\Microsoft.Managed.Core.targets
+C:\Users\johnt\source\Schedule\Scheduler\ApiScheduler\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\johnt\source\Schedule\Scheduler\ApiScheduler\bin\roslyn\System.AppContext.dll
+C:\Users\johnt\source\Schedule\Scheduler\ApiScheduler\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\johnt\source\Schedule\Scheduler\ApiScheduler\bin\roslyn\System.Console.dll
+C:\Users\johnt\source\Schedule\Scheduler\ApiScheduler\bin\roslyn\System.Diagnostics.FileVersionInfo.dll
+C:\Users\johnt\source\Schedule\Scheduler\ApiScheduler\bin\roslyn\System.Diagnostics.StackTrace.dll
+C:\Users\johnt\source\Schedule\Scheduler\ApiScheduler\bin\roslyn\System.IO.Compression.dll
+C:\Users\johnt\source\Schedule\Scheduler\ApiScheduler\bin\roslyn\System.IO.FileSystem.dll
+C:\Users\johnt\source\Schedule\Scheduler\ApiScheduler\bin\roslyn\System.IO.FileSystem.Primitives.dll
+C:\Users\johnt\source\Schedule\Scheduler\ApiScheduler\bin\roslyn\System.IO.Pipes.AccessControl.dll
+C:\Users\johnt\source\Schedule\Scheduler\ApiScheduler\bin\roslyn\System.IO.Pipes.dll
+C:\Users\johnt\source\Schedule\Scheduler\ApiScheduler\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\johnt\source\Schedule\Scheduler\ApiScheduler\bin\roslyn\System.Security.AccessControl.dll
+C:\Users\johnt\source\Schedule\Scheduler\ApiScheduler\bin\roslyn\System.Security.Claims.dll
+C:\Users\johnt\source\Schedule\Scheduler\ApiScheduler\bin\roslyn\System.Security.Cryptography.Algorithms.dll
+C:\Users\johnt\source\Schedule\Scheduler\ApiScheduler\bin\roslyn\System.Security.Cryptography.Encoding.dll
+C:\Users\johnt\source\Schedule\Scheduler\ApiScheduler\bin\roslyn\System.Security.Cryptography.Primitives.dll
+C:\Users\johnt\source\Schedule\Scheduler\ApiScheduler\bin\roslyn\System.Security.Cryptography.X509Certificates.dll
+C:\Users\johnt\source\Schedule\Scheduler\ApiScheduler\bin\roslyn\System.Security.Principal.Windows.dll
+C:\Users\johnt\source\Schedule\Scheduler\ApiScheduler\bin\roslyn\System.Text.Encoding.CodePages.dll
+C:\Users\johnt\source\Schedule\Scheduler\ApiScheduler\bin\roslyn\System.ValueTuple.dll
+C:\Users\johnt\source\Schedule\Scheduler\ApiScheduler\bin\roslyn\System.Xml.ReaderWriter.dll
+C:\Users\johnt\source\Schedule\Scheduler\ApiScheduler\bin\roslyn\System.Xml.XmlDocument.dll
+C:\Users\johnt\source\Schedule\Scheduler\ApiScheduler\bin\roslyn\System.Xml.XPath.dll
+C:\Users\johnt\source\Schedule\Scheduler\ApiScheduler\bin\roslyn\System.Xml.XPath.XDocument.dll
+C:\Users\johnt\source\Schedule\Scheduler\ApiScheduler\bin\roslyn\vbc.exe
+C:\Users\johnt\source\Schedule\Scheduler\ApiScheduler\bin\roslyn\vbc.exe.config
+C:\Users\johnt\source\Schedule\Scheduler\ApiScheduler\bin\roslyn\vbc.rsp
+C:\Users\johnt\source\Schedule\Scheduler\ApiScheduler\bin\roslyn\VBCSCompiler.exe
+C:\Users\johnt\source\Schedule\Scheduler\ApiScheduler\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\johnt\source\Schedule\Scheduler\ApiScheduler\bin\Antlr3.Runtime.dll
+C:\Users\johnt\source\Schedule\Scheduler\ApiScheduler\bin\EntityFramework.dll
+C:\Users\johnt\source\Schedule\Scheduler\ApiScheduler\bin\EntityFramework.SqlServer.dll
+C:\Users\johnt\source\Schedule\Scheduler\ApiScheduler\bin\FromHeaderAttribute.dll
+C:\Users\johnt\source\Schedule\Scheduler\ApiScheduler\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\johnt\source\Schedule\Scheduler\ApiScheduler\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\johnt\source\Schedule\Scheduler\ApiScheduler\bin\Newtonsoft.Json.dll
+C:\Users\johnt\source\Schedule\Scheduler\ApiScheduler\bin\Swagger.Net.dll
+C:\Users\johnt\source\Schedule\Scheduler\ApiScheduler\bin\Swashbuckle.Core.dll
+C:\Users\johnt\source\Schedule\Scheduler\ApiScheduler\bin\System.Net.Http.Formatting.dll
+C:\Users\johnt\source\Schedule\Scheduler\ApiScheduler\bin\System.Web.Helpers.dll
+C:\Users\johnt\source\Schedule\Scheduler\ApiScheduler\bin\System.Web.Http.dll
+C:\Users\johnt\source\Schedule\Scheduler\ApiScheduler\bin\System.Web.Http.WebHost.dll
+C:\Users\johnt\source\Schedule\Scheduler\ApiScheduler\bin\System.Web.Mvc.dll
+C:\Users\johnt\source\Schedule\Scheduler\ApiScheduler\bin\System.Web.Optimization.dll
+C:\Users\johnt\source\Schedule\Scheduler\ApiScheduler\bin\System.Web.Razor.dll
+C:\Users\johnt\source\Schedule\Scheduler\ApiScheduler\bin\System.Web.WebPages.Deployment.dll
+C:\Users\johnt\source\Schedule\Scheduler\ApiScheduler\bin\System.Web.WebPages.dll
+C:\Users\johnt\source\Schedule\Scheduler\ApiScheduler\bin\System.Web.WebPages.Razor.dll
+C:\Users\johnt\source\Schedule\Scheduler\ApiScheduler\bin\WebActivatorEx.dll
+C:\Users\johnt\source\Schedule\Scheduler\ApiScheduler\bin\WebGrease.dll
+C:\Users\johnt\source\Schedule\Scheduler\ApiScheduler\bin\Antlr3.Runtime.pdb
+C:\Users\johnt\source\Schedule\Scheduler\ApiScheduler\bin\EntityFramework.xml
+C:\Users\johnt\source\Schedule\Scheduler\ApiScheduler\bin\EntityFramework.SqlServer.xml
+C:\Users\johnt\source\Schedule\Scheduler\ApiScheduler\bin\Newtonsoft.Json.xml
+C:\Users\johnt\source\Schedule\Scheduler\ApiScheduler\bin\System.Web.Helpers.xml
+C:\Users\johnt\source\Schedule\Scheduler\ApiScheduler\bin\System.Web.Mvc.xml
+C:\Users\johnt\source\Schedule\Scheduler\ApiScheduler\bin\System.Web.Optimization.xml
+C:\Users\johnt\source\Schedule\Scheduler\ApiScheduler\bin\System.Web.Razor.xml
+C:\Users\johnt\source\Schedule\Scheduler\ApiScheduler\bin\System.Web.WebPages.xml
+C:\Users\johnt\source\Schedule\Scheduler\ApiScheduler\bin\System.Web.WebPages.Deployment.xml
+C:\Users\johnt\source\Schedule\Scheduler\ApiScheduler\bin\System.Web.WebPages.Razor.xml
+C:\Users\johnt\source\Schedule\Scheduler\ApiScheduler\bin\System.Net.Http.Formatting.xml
+C:\Users\johnt\source\Schedule\Scheduler\ApiScheduler\bin\System.Web.Http.xml
+C:\Users\johnt\source\Schedule\Scheduler\ApiScheduler\bin\System.Web.Http.WebHost.xml
+C:\Users\johnt\source\Schedule\Scheduler\ApiScheduler\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\johnt\source\Schedule\Scheduler\ApiScheduler\obj\Release\ApiScheduler.csprojAssemblyReference.cache
+C:\Users\johnt\source\Schedule\Scheduler\ApiScheduler\obj\Release\ApiScheduler.csproj.GenerateResource.cache
+C:\Users\johnt\source\Schedule\Scheduler\ApiScheduler\obj\Release\ApiScheduler.csproj.CopyComplete
+C:\Users\johnt\source\Schedule\Scheduler\ApiScheduler\obj\Release\ApiScheduler.dll
+C:\Users\johnt\source\Schedule\Scheduler\ApiScheduler\obj\Release\ApiScheduler.pdb
+C:\Users\johnt\source\Schedule\Scheduler\ApiScheduler\obj\Release\ApiScheduler.Migrations.ex.resources
+C:\Users\johnt\source\Schedule\Scheduler\ApiScheduler\obj\Release\ApiScheduler.Migrations._healthFacility.resources
+C:\Users\johnt\source\Schedule\Scheduler\ApiScheduler\obj\Release\ApiScheduler.Migrations.newDaysDefinition.resources
+C:\Users\johnt\source\Schedule\Scheduler\ApiScheduler\obj\Release\ApiScheduler.Migrations.directors.resources

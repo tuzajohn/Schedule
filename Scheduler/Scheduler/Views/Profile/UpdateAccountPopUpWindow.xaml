@@ -1,0 +1,151 @@
+﻿<Window x:Class="Scheduler.Views.Profile.UpdateAccountPopUpWindow"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Scheduler.Views.Profile"
+      mc:Ignorable="d" 
+      d:DesignHeight="750" d:DesignWidth="650"
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+      Title="Updating">
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Button.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.ListBox.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.PopupBox.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.RadioButton.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.TextBlock.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.ToggleButton.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.DialogHost.xaml" />
+                <ResourceDictionary Source="pack://application:,,,/MaterialDesignThemes.Wpf;component/Themes/MaterialDesignTheme.Flipper.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+            <BooleanToVisibilityConverter x:Key="BooleanToVisibilityConverter" />
+
+        </ResourceDictionary>
+    </Window.Resources>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width=".5*"/>
+            <ColumnDefinition Width=".5*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height=".5*" />
+            <RowDefinition Height=".5*" />
+        </Grid.RowDefinitions>
+        
+        
+        
+        <!--Account Grid-->
+        <materialDesign:Card Background="White"
+                             Foreground="Black"
+                             Padding="8" Margin="10 10 5 5" UniformCornerRadius="6" Grid.Column="0" Grid.Row="0"
+                             HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+            <StackPanel HorizontalAlignment="Stretch" VerticalAlignment="Center" Orientation="Vertical">
+
+                <PasswordBox  Style="{StaticResource MaterialDesignOutlinedPasswordFieldPasswordBox}" VerticalAlignment="Top" Margin="5 10"
+                                  IsEnabled="{Binding Path=IsChecked, ElementName=MaterialDesignOutlinedPasswordFieldPasswordBoxEnabledComboBox}"
+                                  materialDesign:HintAssist.Hint="Password" Name="PasswordBox" />
+                
+                <PasswordBox  Style="{StaticResource MaterialDesignOutlinedPasswordFieldPasswordBox}" VerticalAlignment="Top" Margin="5 10"
+                                  IsEnabled="{Binding Path=IsChecked, ElementName=MaterialDesignOutlinedPasswordFieldPasswordBoxEnabledComboBox}"
+                                  materialDesign:HintAssist.Hint="Repeat Password" Name="RepeatPassowrdBox" />
+                <Button Style="{StaticResource MaterialDesignRaisedAccentButton}" Width="auto" Margin="5 10"
+                        ToolTip="Changing password" Click="Button_Click">
+                    Change Password
+                </Button>
+
+            </StackPanel>
+        </materialDesign:Card>
+        
+        
+        <!--Division Grid-->
+        <materialDesign:Card Background="White"
+                             Foreground="Black"
+                             Padding="8" UniformCornerRadius="6" Grid.Column="0"
+                             Grid.Row="1"  Margin="10 5 5 10"
+                             HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+            <StackPanel HorizontalAlignment="Stretch" VerticalAlignment="Center">
+                <StackPanel>
+                    <TextBox Style="{StaticResource MaterialDesignOutlinedTextFieldTextBox}" VerticalAlignment="Top"
+                             AcceptsReturn="True" TextWrapping="Wrap" Margin="5 10"
+                             materialDesign:HintAssist.Hint="Division Name" Name="DivisionName" />
+                    
+                    <TextBox Style="{StaticResource MaterialDesignOutlinedTextFieldTextBox}"
+                             Margin="5 10" VerticalAlignment="Top" Height="100"
+                             AcceptsReturn="True" TextWrapping="Wrap" VerticalScrollBarVisibility="Auto" Visibility="Hidden"
+                             materialDesign:HintAssist.Hint="Division description" Name="DivisionDescriptionBox" />
+                </StackPanel>
+                <Button Style="{StaticResource MaterialDesignRaisedAccentButton}" Width="auto" Margin="5 10"
+                        ToolTip="Updating Division" Name="UpdateDivisionBtn" Click="UpdateDivisionBtn_Click">
+                    Update Division
+                </Button>
+            </StackPanel>
+        </materialDesign:Card>
+        
+        
+        <!--Ward Grid-->
+        <materialDesign:Card Background="White"
+                             Foreground="Black"
+                             Padding="8" UniformCornerRadius="6" Grid.Column="1"
+                             Grid.Row="0"  Margin="5 10 10 5"
+                             HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+            <StackPanel HorizontalAlignment="Stretch" VerticalAlignment="Center">
+                <StackPanel>
+                    <TextBox Style="{StaticResource MaterialDesignOutlinedTextFieldTextBox}" VerticalAlignment="Top"
+                             AcceptsReturn="True" TextWrapping="Wrap" Margin="5 10"
+                             materialDesign:HintAssist.Hint="Ward Name" Name="WardNameBox" />
+
+                    <TextBox Style="{StaticResource MaterialDesignOutlinedTextFieldTextBox}"
+                             Margin="5 10" VerticalAlignment="Top" Height="100"
+                             AcceptsReturn="True" TextWrapping="Wrap" VerticalScrollBarVisibility="Auto"
+                             materialDesign:HintAssist.Hint="Ward description" Name="WardDescriptionBox" />
+                </StackPanel>
+                <Button Style="{StaticResource MaterialDesignRaisedAccentButton}" Width="auto" Margin="5 10"
+                        ToolTip="Updating Division" Name="UpdateWardBtn" Click="UpdateWardBtn_Click">
+                    Update Ward
+                </Button>
+            </StackPanel>
+        </materialDesign:Card>
+        
+        
+        <!--User Grid-->
+        <materialDesign:Card Background="White"
+                             Foreground="Black"
+                             Padding="8" UniformCornerRadius="6" Grid.Column="1"
+                             Grid.Row="1" Margin="5 5 10 10"
+                             HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+            <StackPanel HorizontalAlignment="Stretch" VerticalAlignment="Center">
+                <StackPanel>
+                    <ComboBox materialDesign:HintAssist.Hint="Marital Status" IsEditable="True" Margin="5 10"
+                              Style="{StaticResource MaterialDesignFloatingHintComboBox}" Name="MaritalStatusComboBox">
+                        <ComboBoxItem>
+                            Married
+                        </ComboBoxItem>
+                        <ComboBoxItem>
+                            Single
+                        </ComboBoxItem>
+                        <ComboBoxItem>
+                            Divorced
+                        </ComboBoxItem>
+                        <ComboBoxItem>
+                            Widow / Widower
+                        </ComboBoxItem>
+                    </ComboBox>
+
+
+                    <TextBox Style="{StaticResource MaterialDesignOutlinedTextFieldTextBox}" Name="address"
+                             Margin="5 10" VerticalAlignment="Top" Height="100"
+                             AcceptsReturn="True" TextWrapping="Wrap" VerticalScrollBarVisibility="Auto"
+                             materialDesign:HintAssist.Hint="My Address" />
+
+                </StackPanel>
+                <Button Style="{StaticResource MaterialDesignRaisedAccentButton}" Width="auto" Margin="5 10"
+                        ToolTip="Updating Division" Name="UpdateUserDataBtn" Click="UpdateUserDataBtn_Click">
+                    Update My User Details
+                </Button>
+            </StackPanel>
+        </materialDesign:Card>
+
+    </Grid>
+</Window>

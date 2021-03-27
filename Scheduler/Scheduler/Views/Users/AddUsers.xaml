@@ -1,0 +1,132 @@
+﻿<Page x:Class="Scheduler.Views.Users.AddUsers"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:domain1="clr-namespace:Scheduler.Domain"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+      Title="AddUsers">
+
+    <Grid>
+
+        <materialDesign:Card Background="{DynamicResource PrimaryHueLightBrush}"
+                             Foreground="{DynamicResource PrimaryHueLightForegroundBrush}"
+                             VerticalAlignment="Stretch" HorizontalAlignment="Stretch"
+                             Padding="8">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="auto"/>
+                </Grid.RowDefinitions>
+
+                <StackPanel Grid.Column="0" Margin="0 0 0 6" Grid.Row="0">
+
+                    <StackPanel Orientation="Vertical" VerticalAlignment="Center">
+
+                        <TextBox materialDesign:HintAssist.Hint="First Name"
+                                 materialDesign:TextFieldAssist.TextBoxViewMargin="1 0 1 0"
+                                 materialDesign:HintAssist.FloatingScale="0.50" Name="Fname"
+                                 Margin="0 20 0 0"
+                                 Style="{StaticResource MaterialDesignFloatingHintTextBox}" FontSize="20" />
+
+                        <TextBox materialDesign:HintAssist.Hint="Last Name" materialDesign:TextFieldAssist.TextBoxViewMargin="1 0 1 0"
+                                 materialDesign:HintAssist.FloatingScale="0.50" Name="Lname"
+                                 Margin="0 20 0 0"
+                                 Style="{StaticResource MaterialDesignFloatingHintTextBox}" FontSize="20" />
+
+                        <TextBox materialDesign:HintAssist.Hint="Email"
+                                 materialDesign:TextFieldAssist.TextBoxViewMargin="1 0 1 0"
+                                 materialDesign:HintAssist.FloatingScale="0.50" Name="Email"
+                                 Margin="0 20 0 0"
+                                 Style="{StaticResource MaterialDesignFloatingHintTextBox}" FontSize="20" />
+
+                        <TextBox materialDesign:HintAssist.Hint="Contact"
+                                 materialDesign:TextFieldAssist.TextBoxViewMargin="1 0 1 0"
+                                 materialDesign:HintAssist.FloatingScale="0.50" Name="Contact"
+                                 Margin="0 20 0 0"
+                                 Style="{StaticResource MaterialDesignFloatingHintTextBox}" FontSize="20" />
+
+                        <ComboBox materialDesign:HintAssist.Hint="Select Gender" 
+                                  IsEditable="True"
+                                  FontSize="20" Name="Gender"
+                                  Margin="0 20 0 0"
+                                  Style="{StaticResource MaterialDesignFloatingHintComboBox}">
+                            <ComboBoxItem>
+                                Male
+                            </ComboBoxItem>
+                            <ComboBoxItem>
+                                Female
+                            </ComboBoxItem>
+                        </ComboBox>
+                        <TextBox TextWrapping="Wrap" VerticalAlignment="Stretch" 
+                                 MinWidth="280" AcceptsReturn="True" VerticalScrollBarVisibility="Auto"
+                                 SpellCheck.IsEnabled="True" FontSize="20"
+                                 Margin="0 20 0 0"
+                                 materialDesign:HintAssist.Hint="Medical History" Height="100">
+
+                        </TextBox>
+                    </StackPanel>
+
+                </StackPanel>
+
+                <StackPanel Grid.Column="1" Margin="6 0 0 0" Grid.Row="0">
+
+                    <StackPanel Orientation="Vertical" VerticalAlignment="Center">
+                        <DatePicker HorizontalAlignment="Stretch" FontSize="20" Name="DOB"
+                                    materialDesign:HintAssist.Hint="Date of Birth"
+                                    Margin="0 20 0 0"
+                                    Style="{StaticResource MaterialDesignFloatingHintDatePicker}" />
+
+                        <ComboBox materialDesign:HintAssist.Hint="Select Division"
+                                  IsEditable="True" Name="DivisionBox"
+                                  FontSize="20" 
+                                  Margin="0 20 0 0"
+                                  Style="{StaticResource MaterialDesignFloatingHintComboBox}">
+                        </ComboBox>
+                        
+                        <ComboBox materialDesign:HintAssist.Hint="Select Ward"
+                                  IsEditable="True" Name="WardComboBox" FontSize="20"
+                                  Margin="0 20 0 0"
+                                  Style="{StaticResource MaterialDesignFloatingHintComboBox}">
+                        </ComboBox>
+
+
+                        <PasswordBox x:Name="PasswordBox" materialDesign:HintAssist.Hint="Password"
+                                     FontSize="20"
+                                     Margin="0 20 0 0"
+                             Style="{StaticResource MaterialDesignFloatingHintPasswordBox}" />
+
+                        <PasswordBox x:Name="RepPasswordBox" materialDesign:HintAssist.Hint="Password"
+                                     FontSize="20"
+                                     Margin="0 20 0 0"
+                             Style="{StaticResource MaterialDesignFloatingHintPasswordBox}" />
+
+                    </StackPanel>
+
+                </StackPanel>
+
+                <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Stretch">
+                    <Grid HorizontalAlignment="Center">
+                        <Button Style="{StaticResource MaterialDesignRaisedButton}"
+                                ToolTip="Saving new personel" Width="300"
+                                HorizontalAlignment="Stretch" Name="SaveUser" Click="SaveUser_Click">
+                            <TextBlock>
+                                <materialDesign:PackIcon Kind="ContentSave" /> Save
+                            </TextBlock>
+                        </Button>
+                    </Grid>
+                </StackPanel>
+
+
+            </Grid>
+        </materialDesign:Card>
+
+
+    </Grid>
+</Page>
