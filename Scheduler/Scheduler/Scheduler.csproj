@@ -115,7 +115,10 @@
     <Compile Include="RestServices\Models\LoginResponse.cs" />
     <Compile Include="RestServices\Models\AccountResponse.cs" />
     <Compile Include="RestServices\Models\Responses\Response.cs" />
+    <Compile Include="RestServices\Models\Responses\ShiftRequest.cs" />
+    <Compile Include="RestServices\Models\Shift.cs" />
     <Compile Include="RestServices\Models\UserResponse.cs" />
+    <Compile Include="RestServices\ShiftService.cs" />
     <Compile Include="RestServices\UserService.cs" />
     <Compile Include="RestServices\WardService.cs" />
     <Compile Include="Support.cs" />
@@ -133,6 +136,9 @@
     </Compile>
     <Compile Include="Views\Shared\SuperUserLayout.xaml.cs">
       <DependentUpon>SuperUserLayout.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Shifts\Index.xaml.cs">
+      <DependentUpon>Index.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\SuperUser\Dashboard.xaml.cs">
       <DependentUpon>Dashboard.xaml</DependentUpon>
@@ -198,6 +204,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\Shared\SuperUserLayout.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Shifts\Index.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
