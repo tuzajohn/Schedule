@@ -27,7 +27,7 @@
             <param name="password"></param>
             <returns></returns>
         </member>
-        <member name="M:ApiScheduler.Controllers.AccountController.SaveAccount(System.String,System.String,System.Boolean)">
+        <member name="M:ApiScheduler.Controllers.AccountController.SaveAccount(System.String,System.String,System.String)">
             <summary>
             Saves an account
             </summary>

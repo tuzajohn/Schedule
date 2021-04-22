@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="SchedulerDb-Web.config Connection String" description="SchedulerDb Connection String used in web.config by the application to access the database." defaultValue="Data Source=BTD-ALC-002\SQLEXPRESS;Initial Catalog=SchedulerProject;Integrated Security=true" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\circuit\\Source\\Repos\\Schedule\\Scheduler\\ApiScheduler\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='SchedulerDb']/@connectionString" />
+  </parameter>
+</parameters>
