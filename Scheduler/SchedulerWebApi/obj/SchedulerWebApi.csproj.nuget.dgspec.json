@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\circuit\\Source\\Repos\\Schedule\\Scheduler\\SchedulerWebApi\\SchedulerWebApi.csproj": {}
+    "C:\\Users\\circuit\\source\\repos\\Schedule\\Scheduler\\SchedulerWebApi\\SchedulerWebApi.csproj": {}
   },
   "projects": {
-    "C:\\Users\\circuit\\Source\\Repos\\Schedule\\Scheduler\\SchedulerWebApi\\SchedulerWebApi.csproj": {
+    "C:\\Users\\circuit\\source\\repos\\Schedule\\Scheduler\\SchedulerWebApi\\SchedulerWebApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\circuit\\Source\\Repos\\Schedule\\Scheduler\\SchedulerWebApi\\SchedulerWebApi.csproj",
+        "projectUniqueName": "C:\\Users\\circuit\\source\\repos\\Schedule\\Scheduler\\SchedulerWebApi\\SchedulerWebApi.csproj",
         "projectName": "SchedulerWebApi",
-        "projectPath": "C:\\Users\\circuit\\Source\\Repos\\Schedule\\Scheduler\\SchedulerWebApi\\SchedulerWebApi.csproj",
+        "projectPath": "C:\\Users\\circuit\\source\\repos\\Schedule\\Scheduler\\SchedulerWebApi\\SchedulerWebApi.csproj",
         "packagesPath": "C:\\Users\\circuit\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\circuit\\Source\\Repos\\Schedule\\Scheduler\\SchedulerWebApi\\obj\\",
+        "outputPath": "C:\\Users\\circuit\\source\\repos\\Schedule\\Scheduler\\SchedulerWebApi\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Ksv+GkqR2Cse/EV5UlDjVcZxclCCLbVom8ilk/umVYhgV6tskCO6K+0VwGxDloNCgBmTd4MrPdBSFcyVHK8ZwA==",
+  "dgSpecHash": "omTQ4tlA/AY26YhzEnpdj4UJJwyEpwfwcD6s4dK3gbqsuQlyFMWmdeo3dQWQqbjyyxHgDRtVV5wWh3DYeMxxpQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\circuit\\Source\\Repos\\Schedule\\Scheduler\\SchedulerWebApi\\SchedulerWebApi.csproj",
+  "projectFilePath": "C:\\Users\\circuit\\source\\repos\\Schedule\\Scheduler\\SchedulerWebApi\\SchedulerWebApi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\circuit\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\1.1.1\\microsoft.bcl.asyncinterfaces.1.1.1.nupkg.sha512",
     "C:\\Users\\circuit\\.nuget\\packages\\microsoft.bcl.hashcode\\1.1.1\\microsoft.bcl.hashcode.1.1.1.nupkg.sha512",
