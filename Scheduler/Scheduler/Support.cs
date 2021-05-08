@@ -13,8 +13,8 @@ namespace Scheduler
         {
             try
             {
-                var _result = ConfigurationManager.AppSettings[key].ToString();
-                data = _result;
+                var _result = ConfigurationManager.AppSettings[key]?.ToString();
+                data = _result ?? throw new Exception("");
                 return true;
             }
             catch (Exception)

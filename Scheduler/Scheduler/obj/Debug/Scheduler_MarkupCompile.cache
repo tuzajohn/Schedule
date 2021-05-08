@@ -4,16 +4,16 @@
 winexe
 C#
 .cs
-C:\Users\circuit\Source\Repos\Schedule\Scheduler\Scheduler\obj\Debug\
+C:\Users\circuit\source\repos\Schedule\Scheduler\Scheduler\obj\Debug\
 Scheduler
 none
 false
 DEBUG;TRACE
-C:\Users\circuit\Source\Repos\Schedule\Scheduler\Scheduler\App.xaml
+C:\Users\circuit\source\repos\Schedule\Scheduler\Scheduler\App.xaml
 17-1616138385
 
 46183027630
-24441039701
+271338011385
 AccountWindow.xaml;MainWindow.xaml;MasterWindow.xaml;Views\Home\IndexPage.xaml;Views\Profile\AccountPage.xaml;Views\Profile\UpdateAccountPopUpWindow.xaml;Views\Shared\Loader.xaml;Views\Shared\SuperUserLayout.xaml;Views\Shifts\Index.xaml;Views\SuperUser\Dashboard.xaml;Views\SuperUser\HealthFacility.xaml;Views\SuperUser\NewDirector.xaml;Views\Users\AddUsers.xaml;Views\Users\AllUsers.xaml;Views\Wards\AllUser.xaml;Views\Wards\EditWardWindow.xaml;Views\Wards\IndexPage.xaml;
 
 False

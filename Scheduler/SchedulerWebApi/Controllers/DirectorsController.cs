@@ -57,7 +57,7 @@ namespace SchedulerWebApi.Controllers
             }
             return Ok(new
             {
-                code = message == "" ? -1 : 0,
+                code = message == "" ? 0 : -1,
                 message,
                 data = _directors
             });

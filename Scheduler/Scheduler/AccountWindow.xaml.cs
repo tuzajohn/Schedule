@@ -48,12 +48,11 @@ namespace Scheduler
             var _response = new Response<LoginResponse>();
             List<Task> ls = new List<Task>();
             LoginBtn.Content = "Signing you in, please wait...";
-
+            
             ls.Add(Task.Run(() =>
             {
                 _response = _loginService.CheckLogin(_email, _pass);
             }));
-           
 
             Task.WaitAll(ls.ToArray());
             LoginBtn.Content = "Login";
