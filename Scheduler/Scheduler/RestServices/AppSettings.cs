@@ -12,7 +12,7 @@ namespace Scheduler.RestServices
         public string SchedulerEndPoint { get; set; } = "SchedulerEndPoint";
         public string SchedulerEndPointOnline { get; set; } = "SchedulerEndPointOnline";
         public string BaseURl { get; set; } = ConfigurationManager.AppSettings["SchedulerEndPointOnline"].ToString();
-        public static string TestUrl { get; set; } = "http://centatech-001-site2.atempurl.com/divisions";
+        public static string TestUrl { get; set; } = ConfigurationManager.AppSettings["SchedulerEndPointOnline"].ToString() + "divisions";
         public AppSettings (bool online = true) => BaseURl = ConfigurationManager.AppSettings[online ? SchedulerEndPointOnline : SchedulerEndPoint].ToString();
     }
 }

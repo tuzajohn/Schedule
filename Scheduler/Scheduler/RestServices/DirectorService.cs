@@ -17,7 +17,7 @@ namespace Scheduler.RestServices
         public DirectorService(bool online = true)
         {
             _restClient = new RestClient(new AppSettings(online).BaseURl);
-            _restClient.Timeout = 1000;
+            _restClient.Timeout = 10000;
         }
         public Director GetDirector(string id)
         {
