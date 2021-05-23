@@ -29,7 +29,7 @@
                     HorizontalAlignment="Stretch">
             <TextBox x:Name="EmailTextBox" 
                      Margin="0 5 0 0"
-                 materialDesign:HintAssist.Hint="Email" Foreground="White"/>
+                 materialDesign:HintAssist.Hint="Username" Foreground="White"/>
             <PasswordBox x:Name="PasswordBox"
                      Margin="0 5 0 0"
                      materialDesign:HintAssist.Hint="Password" Foreground="White" />

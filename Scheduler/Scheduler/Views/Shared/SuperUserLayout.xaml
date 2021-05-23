@@ -107,18 +107,7 @@
                         HorizontalAlignment="Stretch">
                     <TextBlock> <materialDesign:PackIcon Kind="ViewDashboardOutline" /> Dashboard</TextBlock>
                 </Button>
-                <Button Style="{StaticResource MaterialDesignRaisedLightButton}"
-                    Margin="0 5 0 0"
-                    VerticalAlignment="Top"
-                    ToolTip="Wards" Name="HealthFacilityBtn"
-                    Click="HealthFacilityBtn_Click" HorizontalContentAlignment="Left"
-                    materialDesign:ShadowAssist.ShadowDepth="Depth4"
-                    materialDesign:RippleAssist.Feedback="#DD000000"
-                    HorizontalAlignment="Stretch">
-                    <TextBlock TextAlignment="Left">
-                        <materialDesign:PackIcon Kind="Building" /> Health Facility</TextBlock>
-                </Button>
-                
+
                 <Button Style="{StaticResource MaterialDesignRaisedLightButton}"
                     Margin="0 5 0 0"
                     VerticalAlignment="Top"
@@ -131,6 +120,18 @@
                         <materialDesign:PackIcon Kind="Users" /> Directors</TextBlock>
                 </Button>
 
+                <Button Style="{StaticResource MaterialDesignRaisedLightButton}"
+                    Margin="0 5 0 0"
+                    VerticalAlignment="Top"
+                    ToolTip="Wards" Name="HealthFacilityBtn"
+                    Click="HealthFacilityBtn_Click" HorizontalContentAlignment="Left"
+                    materialDesign:ShadowAssist.ShadowDepth="Depth4"
+                    materialDesign:RippleAssist.Feedback="#DD000000"
+                    HorizontalAlignment="Stretch">
+                    <TextBlock TextAlignment="Left">
+                        <materialDesign:PackIcon Kind="Building" /> Health Facility</TextBlock>
+                </Button>
+                
                 <Button Style="{StaticResource MaterialDesignRaisedLightButton}"
                     Margin="0 5 0 0"
                     VerticalAlignment="Top"

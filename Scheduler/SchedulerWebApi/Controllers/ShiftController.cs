@@ -35,17 +35,17 @@ namespace SchedulerWebApi.Controllers
         {
 
             #region headerCheck
-            var headers = Request.Headers;
-            if (!headers.ContainsKey("xlog"))
-            {
-                return Ok(new { message = "Information is missing (xlog)" });
-            }
+            //var headers = Request.Headers;
+            //if (!headers.ContainsKey("xlog"))
+            //{
+            //    return Ok(new { message = "Information is missing (xlog)" });
+            //}
 
-            var token = headers["xlog"].First();
-            if (token != "my api")
-            {
-                return Ok(new { message = "Information is missing (xlog)" });
-            }
+            //var token = headers["xlog"].First();
+            //if (token != "my api")
+            //{
+            //    return Ok(new { message = "Information is missing (xlog)" });
+            //}
             #endregion
 
 

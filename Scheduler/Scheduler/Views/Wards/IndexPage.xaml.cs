@@ -26,12 +26,19 @@ namespace Scheduler.Views.Wards
             _wards = new ObservableCollection<WardInfo>();
             _userService = new UserService(Support.CheckInternetConnection());
             _wardService = new WardService(Support.CheckInternetConnection());
+            WardDataList.ItemsSource = _wards;
 
             AddItemToList();
             ComboBoxItemsUI();
 
-            WardDataList.ItemsSource = _wards;
+            
 
+        }
+
+        public void LoadIncharge()
+        {
+            //TODO: Load incharges
+            var division = "";
         }
 
         public void AddItemToList()

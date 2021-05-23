@@ -30,6 +30,7 @@ namespace SchedulerWebApi
             services.AddTransient<IDivision, DivisionService>();
             services.AddTransient<IHealtFacility, HealthFacilityService>();
             services.AddTransient<IShift, ShiftService>();
+            services.AddTransient<IHistoryShift, HistoryShiftService>();
             services.AddTransient<IUser, UserService>();
             services.AddTransient<IWard, WardService>();
 
