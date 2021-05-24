@@ -58,7 +58,7 @@ namespace Scheduler.Views.Profile
             Dispatcher.Invoke(() =>
             {
                 _userDetails = _userService.GetUserByAccountId(_accountInfo.Id);
-                _ward = _wardService.GetWardById(_userDetails.Data?.WardId);
+                _ward = _wardService.GetWardById(_userDetails?.Data?.WardId);
                 _division = _divisionService.Get(_ward?.Data?.DivisionId);
 
                 Support.CreateSession("account_ward", JsonConvert.SerializeObject(_ward?.Data));

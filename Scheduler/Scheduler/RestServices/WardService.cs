@@ -28,7 +28,7 @@ namespace Scheduler.RestServices
 
 
             var _response = _restClient.Execute<Response<Ward>>(_restRequest);
-            if (!_response.IsSuccessful) { new Response<Ward>(); }
+            if (!_response.IsSuccessful) { _response.Data = new Response<Ward>(); }
             return _response.Data;
 
         }
@@ -39,7 +39,8 @@ namespace Scheduler.RestServices
 
 
             var _response = _restClient.Execute<Response<List<Ward>>>(_restRequest);
-            if (!_response.IsSuccessful) { new Response<List<Ward>> (); }
+            if (!_response.IsSuccessful) { _response.Data = new Response<List<Ward>> { Data = new List<Ward>() }; }
+
             return _response.Data;
 
         }

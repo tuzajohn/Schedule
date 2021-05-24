@@ -62,8 +62,9 @@ namespace SchedulerWebApi.Controllers
                 _response.check
             });
         }
+
         [HttpGet]
-        [Route("healthfacility/(id)")]
+        [Route("healthfacility/{id}")]
         public IActionResult GetOneCenters(string id)
         {
             var _response = _healthCenterService.Get(id);
@@ -75,9 +76,28 @@ namespace SchedulerWebApi.Controllers
                 _response.check
             });
         }
+        [HttpGet]
+        [Route("healthfacility/director/{id}")]
+        public IActionResult GetOneCenterByDirector(string id)
+        {
+            var _response = _healthCenterService.Get();
+            var center = new HealthCenter();
+            if (_response.healthCenters != null)
+            {
+                center = _response.healthCenters.FirstOrDefault(x => x.Director == id);
+            }
+                
+
+            return Ok(new
+            {
+                data = center,
+                _response.message,
+                _response.check
+            });
+        }
 
         [HttpDelete]
-        [Route("healthfacility/(id)")]
+        [Route("healthfacility/{id}")]
         public IActionResult DeleteOneCenters(string id)
         {
 

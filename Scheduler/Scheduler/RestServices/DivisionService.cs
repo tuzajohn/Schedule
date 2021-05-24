@@ -49,11 +49,13 @@ namespace Scheduler.RestServices
             if (!_response.IsSuccessful) { }
             return _response.Data;
         }
-        public Response<DivisionResponse> CreateDivision(string name)
+
+        public Response<DivisionResponse> CreateDivision(string name, string healthFacilityId)
         {
             _restRequest = new RestRequest(Method.POST);
-            _restRequest.Resource = "divisions?name={name}";
+            _restRequest.Resource = "divisions?name={name}&healthFacilityId={healthFacilityId}";
             _restRequest.AddUrlSegment("name", name);
+            _restRequest.AddUrlSegment("healthFacilityId", healthFacilityId);
             _restRequest.AddHeader("xlog", "my api");
 
             var _response = _restClient.Execute<Response<DivisionResponse>>(_restRequest);
@@ -64,6 +66,15 @@ namespace Scheduler.RestServices
         {
             _restRequest = new RestRequest(Method.GET);
             _restRequest.Resource = "divisions";
+
+            var _response = _restClient.Execute<Response<List<DivisionResponse>>>(_restRequest);
+            if (!_response.IsSuccessful) { }
+            return _response.Data;
+        }
+        public Response<List<DivisionResponse>> GetDivisionsByHealthCenter(string id)
+        {
+            _restRequest = new RestRequest(Method.GET);
+            _restRequest.Resource = "divisions/healthcenter/{id}";
 
             var _response = _restClient.Execute<Response<List<DivisionResponse>>>(_restRequest);
             if (!_response.IsSuccessful) { }

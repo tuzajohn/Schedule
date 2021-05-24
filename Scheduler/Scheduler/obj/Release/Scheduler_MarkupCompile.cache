@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\jennifer.birungi\Source\Repos\Schedule\Scheduler\Scheduler\obj\Release\
+C:\Users\circuit\source\repos\Schedule\Scheduler\Scheduler\obj\Release\
 Scheduler
 none
 false
 TRACE
-C:\Users\jennifer.birungi\Source\Repos\Schedule\Scheduler\Scheduler\App.xaml
-17-1616138385
+C:\Users\circuit\source\repos\Schedule\Scheduler\Scheduler\App.xaml
+201584970337
 
-47-894551202
-272047503694
-AccountWindow.xaml;MainWindow.xaml;MasterWindow.xaml;Views\Home\IndexPage.xaml;Views\Profile\AccountPage.xaml;Views\Profile\UpdateAccountPopUpWindow.xaml;Views\Shared\Loader.xaml;Views\Shared\SuperUserLayout.xaml;Views\Shifts\Index.xaml;Views\SuperUser\Dashboard.xaml;Views\SuperUser\HealthFacility.xaml;Views\SuperUser\NewDirector.xaml;Views\Users\AddUsers.xaml;Views\Users\AllUsers.xaml;Views\Wards\AllUser.xaml;Views\Wards\EditWardWindow.xaml;Views\Wards\IndexPage.xaml;
+511330598996
+271338011385
+AccountWindow.xaml;MainWindow.xaml;MasterWindow.xaml;Views\Divisions\DivisionsIndexPage.xaml;Views\Divisions\NewDivision.xaml;Views\Home\IndexPage.xaml;Views\Profile\AccountPage.xaml;Views\Profile\UpdateAccountPopUpWindow.xaml;Views\Shared\Loader.xaml;Views\Shared\SuperUserLayout.xaml;Views\Shifts\Index.xaml;Views\SuperUser\Dashboard.xaml;Views\SuperUser\Directors.xaml;Views\SuperUser\HealthFacility.xaml;Views\SuperUser\NewDirector.xaml;Views\Users\AddUsers.xaml;Views\Users\AllUsers.xaml;Views\Wards\AllUser.xaml;Views\Wards\EditWardWindow.xaml;Views\Wards\IndexPage.xaml;
 
 True
 

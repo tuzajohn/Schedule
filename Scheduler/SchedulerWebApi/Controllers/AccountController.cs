@@ -173,6 +173,28 @@ namespace SchedulerWebApi.Controllers
 
             return Ok(new { _account.message, data = _account.account, _account.check });
         }
+
+        [HttpGet]
+        [Route("accounts/{id}")]
+        public IActionResult GetAccount(string id)
+        {
+            var _request = Request;
+            var headers = _request.Headers;
+            if (!headers.ContainsKey("xlog"))
+            {
+                return Ok(new { message = "Information is missing (xlog)" });
+            }
+
+            var token = headers["xlog"].First();
+            if (token != "my api")
+            {
+                return Ok(new { message = "Information is missing (xlog)" });
+            }
+
+            var _account = _accountService.Get(id);
+
+            return Ok(new { _account.message, data = _account.account, _account.check });
+        }
     }
 
 

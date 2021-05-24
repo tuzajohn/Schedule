@@ -39,7 +39,7 @@ namespace Scheduler.Views.Users
         void PopulateWardList()
         {
             var _wards = _wardService.GetWards();
-            foreach (var _ward in _wards.Data)
+            foreach (var _ward in _wards?.Data)
             {
                 WardComboBox.Items.Add(_ward.Name);
             }

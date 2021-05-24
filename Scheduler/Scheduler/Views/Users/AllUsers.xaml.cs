@@ -26,7 +26,7 @@ namespace Scheduler.Views.Users
                 {
                     Name = x.FirstName + ' ' + x.LastName,
                     Date = x.CreatedOn.AddHours(3).ToString("dd/MM/yyyy hh:mm tt"),
-                    Ward = new WardService(Support.CheckInternetConnection()).GetWardById(x.WardId).Data.Name
+                    Ward = new WardService(Support.CheckInternetConnection()).GetWardById(x.WardId)?.Data?.Name
                 });
             });
 

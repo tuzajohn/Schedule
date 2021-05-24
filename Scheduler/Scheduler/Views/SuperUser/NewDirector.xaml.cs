@@ -19,7 +19,7 @@ namespace Scheduler.Views.SuperUser
     /// <summary>
     /// Interaction logic for NewDirector.xaml
     /// </summary>
-    public partial class NewDirector : Page
+    public partial class NewDirector : Window
     {
         private DirectorService _directorService;
         private LoginService _loginService;
@@ -76,6 +76,7 @@ namespace Scheduler.Views.SuperUser
             email.Text = "";
             password.Password = "";
             confirmpassword.Password = "";
+            this.Close();
         }
     }
 }

@@ -117,6 +117,7 @@
     <Compile Include="RestServices\DivisionService.cs" />
     <Compile Include="RestServices\HealthFacilityService.cs" />
     <Compile Include="RestServices\LoginService.cs" />
+    <Compile Include="RestServices\Models\DirectorViewModel.cs" />
     <Compile Include="RestServices\Models\DivisionResponse.cs" />
     <Compile Include="RestServices\Models\HealthFacilityResponse.cs" />
     <Compile Include="RestServices\Models\LoginResponse.cs" />
@@ -129,6 +130,12 @@
     <Compile Include="RestServices\UserService.cs" />
     <Compile Include="RestServices\WardService.cs" />
     <Compile Include="Support.cs" />
+    <Compile Include="Views\Divisions\DivisionsIndexPage.xaml.cs">
+      <DependentUpon>DivisionsIndexPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Divisions\NewDivision.xaml.cs">
+      <DependentUpon>NewDivision.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\Home\IndexPage.xaml.cs">
       <DependentUpon>IndexPage.xaml</DependentUpon>
     </Compile>
@@ -149,6 +156,9 @@
     </Compile>
     <Compile Include="Views\SuperUser\Dashboard.xaml.cs">
       <DependentUpon>Dashboard.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\SuperUser\Directors.xaml.cs">
+      <DependentUpon>Directors.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\SuperUser\HealthFacility.xaml.cs">
       <DependentUpon>HealthFacility.xaml</DependentUpon>
@@ -194,6 +204,14 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Views\Divisions\DivisionsIndexPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Divisions\NewDivision.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\Home\IndexPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -219,6 +237,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\SuperUser\Dashboard.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\SuperUser\Directors.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

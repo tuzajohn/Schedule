@@ -1,5 +1,6 @@
 ﻿using System.Linq;
 using Microsoft.AspNetCore.Mvc;
+using SchedulerWebApi.Models;
 using SchedulerWebApi.Models.Interfaces;
 
 namespace SchedulerWebApi.Controllers
@@ -49,6 +50,30 @@ namespace SchedulerWebApi.Controllers
                 _division.check
             });
         }
+
+
+        /// <summary>
+        /// Fetch a all divisions under a certain facility
+        /// </summary>
+        /// <param name="id">healt facility id</param>
+        /// <returns></returns>
+        [HttpGet]
+        [Route("divisions/healthcenter/{id}")]
+        public IActionResult GetDivisionByHealthFacility(string id)
+        {
+            var _division = _divisionService.Get();
+            if (_division.divisions != null)
+            {
+                _division.divisions = _division.divisions.Where(x => x.HealthFacilityId == id);
+            }
+            return Ok(new
+            {
+                data = _division.divisions,
+                _division.message,
+                _division.check
+            });
+        }
+
         /// <summary>
         /// Creates a new division
         /// </summary>
@@ -56,7 +81,7 @@ namespace SchedulerWebApi.Controllers
         /// <returns></returns>
         [HttpPost]
         [Route("divisions")]
-        public IActionResult CreateDivision(string name)
+        public IActionResult CreateDivision(string name, string healthFacilityId)
         {
             var _request = Request;
             var headers = _request.Headers;
@@ -71,7 +96,8 @@ namespace SchedulerWebApi.Controllers
             {
                 return Ok(new { message = "Information is missing (xlog)" });
             }
-            var _division = _divisionService.Add(new Models.Division { Name = name });
+
+            var _division = _divisionService.Add(new Models.Division { Name = name, HealthFacilityId = healthFacilityId });
             return Ok(new
             {
                 data = _division.division,
@@ -104,7 +130,7 @@ namespace SchedulerWebApi.Controllers
         /// <returns></returns>
         [HttpPatch]
         [Route("divisions/{id}")]
-        public IActionResult UpdateDivision(string id, string name)
+        public IActionResult UpdateDivision(string id, string name, string healthFacilityId)
         {
             var _request = Request;
             var headers = _request.Headers;
@@ -126,7 +152,8 @@ namespace SchedulerWebApi.Controllers
                 {
                     Name = _division.division.Name = name,
                     CreatedOn = _division.division.CreatedOn,
-                    Id = _division.division.Id
+                    Id = _division.division.Id,
+                    HealthFacilityId = healthFacilityId
                 });
             }
             return Ok(new

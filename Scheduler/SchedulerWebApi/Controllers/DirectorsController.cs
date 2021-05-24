@@ -31,7 +31,6 @@ namespace SchedulerWebApi.Controllers
             try
             {
                 _context.SaveChanges();
-
             }
             catch (Exception ex) { _director = null; }
             return Ok(new

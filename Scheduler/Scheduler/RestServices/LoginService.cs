@@ -54,5 +54,17 @@ namespace Scheduler.RestServices
             if (!_response.IsSuccessful) { }
             return _response.Data;
         }
+
+        public Response<LoginResponse> GetAccount(string id)
+        {
+            _restRequest = new RestRequest(Method.PATCH);
+            _restRequest.Resource = "accounts/{id}";
+            _restRequest.AddUrlSegment("id", id);
+            _restRequest.AddHeader("xlog", "my api");
+
+            var _response = _restClient.Execute<Response<LoginResponse>>(_restRequest);
+            if (!_response.IsSuccessful) { }
+            return _response.Data;
+        }
     }
 }

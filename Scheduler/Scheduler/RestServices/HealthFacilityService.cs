@@ -18,6 +18,20 @@ namespace Scheduler.RestServices
         {
             _restClient = new RestClient(new AppSettings(online).BaseURl);
         }
+        public Response<HealthFacilityResponse> GetByDirector(string id)
+        {
+            _restRequest = new RestRequest(Method.GET);
+            _restRequest.Resource = "healthfacility/director/{id}";
+            _restRequest.AddUrlSegment("id", id);
+
+            try
+            {
+                var _response = _restClient.Execute<Response<HealthFacilityResponse>>(_restRequest);
+                if (!_response.IsSuccessful) { return new Response<HealthFacilityResponse>(); }
+                return _response.Data;
+            }
+            catch (Exception) { return new Response<HealthFacilityResponse>(); }
+        }
         public Response<HealthFacilityResponse> Get(string id)
         {
             _restRequest = new RestRequest(Method.GET);

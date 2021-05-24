@@ -68,7 +68,7 @@ namespace Scheduler.Views.Shared
             Color newColor = (Color)ColorConverter.ConvertFromString("#ff844c");
             HomeBtn.Background = new SolidColorBrush(newColor);
             HealthFacilityBtn.Background = SignOutBtn.Background;
-            AddNewDirector.Background = SignOutBtn.Background;
+            Director.Background = SignOutBtn.Background;
         }
 
         private void HealthFacilityBtn_Click(object sender, RoutedEventArgs e)
@@ -77,7 +77,7 @@ namespace Scheduler.Views.Shared
             Color newColor = (Color)ColorConverter.ConvertFromString("#ff844c");
             HealthFacilityBtn.Background = new SolidColorBrush(newColor);
             HomeBtn.Background = SignOutBtn.Background;
-            AddNewDirector.Background = SignOutBtn.Background;
+            Director.Background = SignOutBtn.Background;
         }
 
         private void SignOutBtn_Click(object sender, RoutedEventArgs e)
@@ -89,11 +89,11 @@ namespace Scheduler.Views.Shared
                 Close();
             }
         }
-        private void AddNewDirector_Click(object sender, RoutedEventArgs e)
+        private void Director_Click(object sender, RoutedEventArgs e)
         {
-            controlInstance.Content = new NewDirector();
+            controlInstance.Content = new Directors();
             Color newColor = (Color)ColorConverter.ConvertFromString("#ff844c");
-            AddNewDirector.Background = new SolidColorBrush(newColor);
+            Director.Background = new SolidColorBrush(newColor);
             HomeBtn.Background = SignOutBtn.Background;
             HealthFacilityBtn.Background = SignOutBtn.Background;
         }

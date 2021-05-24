@@ -33,7 +33,8 @@ namespace SchedulerWebApi.Services
                     {
                         CreatedOn = DateTime.UtcNow,
                         Id = Guid.NewGuid().ToString(),
-                        Name = division.Name
+                        Name = division.Name,
+                        HealthFacilityId = division.HealthFacilityId
                     };
                     _context.Divisions.Add(_division);
                     _context.SaveChanges();
@@ -125,7 +126,9 @@ namespace SchedulerWebApi.Services
             var check = false;
             try
             {
-                _context.Divisions.Update(division);
+                var div = _context.Divisions.Find(division.Id);
+                div = division;
+                _context.Divisions.Update(div);
                 _context.SaveChanges();
                 message = null;
                 check = true;

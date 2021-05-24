@@ -83,7 +83,10 @@ namespace Scheduler
                 return;
             }
 
-            Support.CreateSession("user", JsonConvert.SerializeObject(_response.Data));
+            var user = _userService.GetUserByAccountId(_response.Data.Id);
+
+            Support.CreateSession("userAccount", JsonConvert.SerializeObject(_response.Data));
+            Support.CreateSession("user", JsonConvert.SerializeObject(user.Data));
             new MasterWindow().Show();
             Close();
         }

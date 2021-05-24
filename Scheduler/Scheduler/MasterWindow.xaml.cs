@@ -4,6 +4,7 @@ using System.Windows.Threading;
 using Newtonsoft.Json;
 using Scheduler.RestServices;
 using Scheduler.RestServices.Models.Responses;
+using Scheduler.Views.Divisions;
 using Scheduler.Views.Profile;
 using Scheduler.Views.Users;
 using Scheduler.Views.Wards;
@@ -96,6 +97,11 @@ namespace Scheduler
             controlInstance.Content = new AddUsers();
             CancelAddUserBtn.Visibility = Visibility.Visible;
             AddUserBtn.Visibility = Visibility.Collapsed;
+        }
+
+        private void DivisionPageBtn_Click(object sender, RoutedEventArgs e)
+        {
+            controlInstance.Content = new DivisionsIndexPage();
         }
     }
 }
