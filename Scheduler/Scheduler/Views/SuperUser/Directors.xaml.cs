@@ -1,4 +1,5 @@
-﻿using Scheduler.RestServices;
+﻿using Scheduler.Models;
+using Scheduler.RestServices;
 using Scheduler.RestServices.Models;
 using System;
 using System.Collections.Generic;
@@ -30,8 +31,8 @@ namespace Scheduler.Views.SuperUser
         public Directors()
         {
             InitializeComponent();
-            _directorService = new DirectorService(Support.CheckInternetConnection());
-            loginService = new LoginService(Support.CheckInternetConnection());
+            _directorService = new DirectorService(GlobalClass.CheckCoonection);
+            loginService = new LoginService(GlobalClass.CheckCoonection);
 
             directors.ItemsSource = DirectorList = new ObservableCollection<DirectorViewModel>();
             LoadDirectors();

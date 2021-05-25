@@ -5,6 +5,7 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:Scheduler.Views.Divisions"
       mc:Ignorable="d" 
+      Background="#000"
       d:DesignHeight="450" d:DesignWidth="800"
       Title="Divisions">
 
@@ -27,10 +28,15 @@
                 <ListView.View>
                     <GridView>
                         <GridViewColumn DisplayMemberBinding="{Binding Name}" Header="Name" />
-                        <GridViewColumn DisplayMemberBinding="{Binding Center}" Header="Director" />
+                        <GridViewColumn DisplayMemberBinding="{Binding Center}" Header="Center" />
                         <GridViewColumn DisplayMemberBinding="{Binding CreatedOn}" Header="Date" />
                     </GridView>
                 </ListView.View>
+                <ListView.ItemContainerStyle>
+                    <Style TargetType="ListViewItem">
+                        <EventSetter Event="PreviewMouseLeftButtonDown" Handler="ListViewItem_PreviewMouseLeftButtonDown" />
+                    </Style>
+                </ListView.ItemContainerStyle>
             </ListView>
         </StackPanel>
     </Grid>

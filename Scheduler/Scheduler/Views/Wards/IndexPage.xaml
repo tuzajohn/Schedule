@@ -35,6 +35,27 @@
                     <TextBlock>
                         Add a new Department / Ward.
                     </TextBlock>
+
+                    <ComboBox materialDesign:HintAssist.Hint="Division" 
+                              x:Name="DivisionList" ItemsSource="{Binding divList}"
+                              materialDesign:HintAssist.HintOpacity=".26"
+                              SelectionChanged="DivisionList_SelectionChanged"
+                              Style="{StaticResource MaterialDesignFloatingHintComboBox}"
+                              SelectedValue="{Binding MyItem, Mode=OneWayToSource}" >
+                        <ComboBox.ItemTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock>
+                                        <Run Text="{Binding Name}" />
+                                         <!--<Run Text=" " />  space 
+                                       <Run Text="{Binding LastName}" />-->
+                                    </TextBlock>
+                                </StackPanel>
+                            </DataTemplate>
+                        </ComboBox.ItemTemplate>
+                        
+                    </ComboBox>
+
                     <TextBox Margin="0 8 0 0" HorizontalAlignment="Stretch"
                              x:Name="NameBox" ToolTip="Department / Ward Name"/>
 
@@ -54,10 +75,24 @@
                               Style="{StaticResource MaterialDesignFloatingHintComboBox}"/>
 
                     <ComboBox materialDesign:HintAssist.Hint="InCharge" 
-                              x:Name="InchargeBox"
+                              x:Name="InchargeBox" ItemsSource="{Binding userList}"
                               materialDesign:HintAssist.HintOpacity=".26"
-                              Style="{StaticResource MaterialDesignFloatingHintComboBox}"/>
+                              SelectionChanged="InchargeBox_SelectionChanged"
+                              Style="{StaticResource MaterialDesignFloatingHintComboBox}">
+                        <ComboBox.ItemTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock>
+                                        <Run Text="{Binding FirstName}" />
+                                         <Run Text=" " /> <!-- space -->
+                                       <Run Text="{Binding LastName}" />
+                                    </TextBlock>
+                                </StackPanel>
+                            </DataTemplate>
+                        </ComboBox.ItemTemplate>
                         
+                    </ComboBox>
+
                     <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
                         <Button Style="{StaticResource MaterialDesignFlatButton}"
                                 IsDefault="True" Margin="0 8 8 0"
@@ -140,24 +175,24 @@
                                                            Grid.ColumnSpan="2" 
                                                            TextWrapping="NoWrap"
                                                            Text="{Binding Description}"/>
-                                                
+
 
                                                 <StackPanel Grid.Row="3" Grid.ColumnSpan="2"
                                                             Orientation="Horizontal"
                                                             Margin="0 2 0 2">
-                                                    
+
                                                     <Button Style="{StaticResource MaterialDesignRaisedLightButton}"
                                                             Margin="0 0 0 0" Click="ViewWardOrDepartmentbtn_Click"
                                                             ToolTip="View" x:Name="ViewWardOrDepartmentbtn">
                                                         <materialDesign:PackIcon Kind="EyeCircle" Margin="0 5" />
                                                     </Button>
-                                                    
+
                                                     <Button Style="{StaticResource MaterialDesignRaisedLightButton}"
                                                             Margin="10 0 10 0" Click="ViewListingForWard_Click"
                                                             ToolTip="View Members" x:Name="ViewListingForWard">
                                                         <materialDesign:PackIcon Kind="ViewList" />
                                                     </Button>
-                                                    
+
                                                     <Button Style="{StaticResource MaterialDesignRaisedLightButton}"
                                                             Margin="0 0 0 0" Click="DeleteWardorDepartmentBtn_Click"
                                                             ToolTip="Delete" x:Name="DeleteWardorDepartmentBtn">

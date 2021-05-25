@@ -85,15 +85,31 @@
 
                         <ComboBox materialDesign:HintAssist.Hint="Select Division"
                                   IsEditable="True" Name="DivisionBox"
-                                  FontSize="20" 
+                                  FontSize="20"  ItemsSource="{Binding divList}"
+                                   SelectionChanged="DivisionBox_SelectionChanged"
                                   Margin="0 20 0 0"
                                   Style="{StaticResource MaterialDesignFloatingHintComboBox}">
+                            <ComboBox.ItemTemplate>
+                                <DataTemplate>
+                                    <StackPanel Orientation="Horizontal">
+                                        <TextBlock Text="{Binding Name}" />
+                                    </StackPanel>
+                                </DataTemplate>
+                            </ComboBox.ItemTemplate>
                         </ComboBox>
                         
                         <ComboBox materialDesign:HintAssist.Hint="Select Ward"
                                   IsEditable="True" Name="WardComboBox" FontSize="20"
+                                   SelectionChanged="WardComboBox_SelectionChanged" ItemsSource="{Binding _wards}"
                                   Margin="0 20 0 0"
                                   Style="{StaticResource MaterialDesignFloatingHintComboBox}">
+                            <ComboBox.ItemTemplate>
+                                <DataTemplate>
+                                    <StackPanel Orientation="Horizontal">
+                                        <TextBlock Text="{Binding Name}" />
+                                    </StackPanel>
+                                </DataTemplate>
+                            </ComboBox.ItemTemplate>
                         </ComboBox>
 
 

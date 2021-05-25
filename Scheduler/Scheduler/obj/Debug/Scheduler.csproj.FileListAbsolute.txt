@@ -367,3 +367,7 @@ C:\Users\circuit\source\repos\Schedule\Scheduler\Scheduler\obj\Debug\Scheduler.c
 C:\Users\circuit\source\repos\Schedule\Scheduler\Scheduler\obj\Debug\Scheduler.csproj.CopyComplete
 C:\Users\circuit\source\repos\Schedule\Scheduler\Scheduler\obj\Debug\Scheduler.exe
 C:\Users\circuit\source\repos\Schedule\Scheduler\Scheduler\obj\Debug\Scheduler.pdb
+C:\Users\circuit\source\repos\Schedule\Scheduler\Scheduler\obj\Debug\Views\Divisions\NewDivision.g.cs
+C:\Users\circuit\source\repos\Schedule\Scheduler\Scheduler\obj\Debug\Views\Divisions\NewDivision.baml
+C:\Users\circuit\source\repos\Schedule\Scheduler\Scheduler\obj\Debug\Views\Divisions\ViewEditDeleteDivision.g.cs
+C:\Users\circuit\source\repos\Schedule\Scheduler\Scheduler\obj\Debug\Views\Divisions\ViewEditDeleteDivision.baml

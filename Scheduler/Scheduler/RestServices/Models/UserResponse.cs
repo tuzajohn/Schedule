@@ -10,6 +10,7 @@ namespace Scheduler.RestServices.Models
     {
         public string Id { get; set; }
         public string AccountId { get; set; }
+        public string CenterId { get; set; }
         public string WardId { get; set; }
         public string FirstName { get; set; }
         public string LastName { get; set; }

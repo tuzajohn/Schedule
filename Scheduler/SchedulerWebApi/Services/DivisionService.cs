@@ -126,9 +126,7 @@ namespace SchedulerWebApi.Services
             var check = false;
             try
             {
-                var div = _context.Divisions.Find(division.Id);
-                div = division;
-                _context.Divisions.Update(div);
+                _context.Divisions.Update(division);
                 _context.SaveChanges();
                 message = null;
                 check = true;

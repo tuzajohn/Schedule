@@ -15,7 +15,7 @@ namespace Scheduler.Views.Users
         public AllUsers()
         {
             InitializeComponent();
-            _userService = new UserService(Support.CheckInternetConnection());
+            _userService = new UserService(GlobalClass.CheckCoonection);
             List<User> items = new List<User>();
             List<UserBody> userBodies = new List<UserBody>();
             var _users = _userService.GetUsers();
@@ -26,7 +26,7 @@ namespace Scheduler.Views.Users
                 {
                     Name = x.FirstName + ' ' + x.LastName,
                     Date = x.CreatedOn.AddHours(3).ToString("dd/MM/yyyy hh:mm tt"),
-                    Ward = new WardService(Support.CheckInternetConnection()).GetWardById(x.WardId)?.Data?.Name
+                    Ward = new WardService(GlobalClass.CheckCoonection).GetWardById(x.WardId)?.Data?.Name
                 });
             });
 

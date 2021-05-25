@@ -11,6 +11,7 @@ namespace Scheduler.Models
         public string Id { get; set; }
         public string DivisionId { get; set; }
         public string InchargeId { get; set; }
+        public string CenterId { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }
         public int NumberOfWorkers { get; set; }

@@ -108,6 +108,7 @@
     <Compile Include="Models\Account.cs" />
     <Compile Include="Models\Director.cs" />
     <Compile Include="Models\Division.cs" />
+    <Compile Include="Models\GlobalClass.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Models\UserResponse.cs" />
     <Compile Include="Models\ViewModel\WardViewModel.cs" />
@@ -135,6 +136,9 @@
     </Compile>
     <Compile Include="Views\Divisions\NewDivision.xaml.cs">
       <DependentUpon>NewDivision.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Divisions\ViewEditDeleteDivision.xaml.cs">
+      <DependentUpon>ViewEditDeleteDivision.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\Home\IndexPage.xaml.cs">
       <DependentUpon>IndexPage.xaml</DependentUpon>
@@ -209,6 +213,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\Divisions\NewDivision.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Divisions\ViewEditDeleteDivision.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

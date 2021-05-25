@@ -44,6 +44,31 @@ namespace Scheduler.RestServices
             return _response.Data;
 
         }
+        public Response<List<Ward>> GetWardsByDivision(string id)
+        {
+            _restRequest = new RestRequest(Method.GET);
+            _restRequest.Resource = $"wards/division/{id}";
+
+
+            var _response = _restClient.Execute<Response<List<Ward>>>(_restRequest);
+            if (!_response.IsSuccessful) { _response.Data = new Response<List<Ward>> { Data = new List<Ward>() }; }
+
+            return _response.Data;
+
+        }
+
+        public Response<List<Ward>> GetWardsByCenter(string id)
+        {
+            _restRequest = new RestRequest(Method.GET);
+            _restRequest.Resource = $"wards/center/{id}";
+
+
+            var _response = _restClient.Execute<Response<List<Ward>>>(_restRequest);
+            if (!_response.IsSuccessful) { _response.Data = new Response<List<Ward>> { Data = new List<Ward>() }; }
+
+            return _response.Data;
+
+        }
 
         public Response<Ward> Add(Ward ward)
         {

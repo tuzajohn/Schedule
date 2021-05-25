@@ -4,6 +4,8 @@ FC:\Users\circuit\source\repos\Schedule\Scheduler\Scheduler\AccountWindow.xaml;;
 FC:\Users\circuit\source\repos\Schedule\Scheduler\Scheduler\MainWindow.xaml;;
 FC:\Users\circuit\source\repos\Schedule\Scheduler\Scheduler\MasterWindow.xaml;;
 FC:\Users\circuit\source\repos\Schedule\Scheduler\Scheduler\Views\Divisions\DivisionsIndexPage.xaml;;
+FC:\Users\circuit\source\repos\Schedule\Scheduler\Scheduler\Views\Divisions\NewDivision.xaml;;
+FC:\Users\circuit\source\repos\Schedule\Scheduler\Scheduler\Views\Divisions\ViewEditDeleteDivision.xaml;;
 FC:\Users\circuit\source\repos\Schedule\Scheduler\Scheduler\Views\Home\IndexPage.xaml;;
 FC:\Users\circuit\source\repos\Schedule\Scheduler\Scheduler\Views\Profile\AccountPage.xaml;;
 FC:\Users\circuit\source\repos\Schedule\Scheduler\Scheduler\Views\Profile\UpdateAccountPopUpWindow.xaml;;
@@ -19,5 +21,4 @@ FC:\Users\circuit\source\repos\Schedule\Scheduler\Scheduler\Views\Users\AllUsers
 FC:\Users\circuit\source\repos\Schedule\Scheduler\Scheduler\Views\Wards\AllUser.xaml;;
 FC:\Users\circuit\source\repos\Schedule\Scheduler\Scheduler\Views\Wards\EditWardWindow.xaml;;
 FC:\Users\circuit\source\repos\Schedule\Scheduler\Scheduler\Views\Wards\IndexPage.xaml;;
-FC:\Users\circuit\source\repos\Schedule\Scheduler\Scheduler\Views\Divisions\NewDivision.xaml;;
 

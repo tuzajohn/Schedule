@@ -1,4 +1,5 @@
-﻿using Scheduler.RestServices;
+﻿using Scheduler.Models;
+using Scheduler.RestServices;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -26,8 +27,8 @@ namespace Scheduler.Views.SuperUser
         public NewDirector()
         {
             InitializeComponent();
-            _directorService = new DirectorService(Support.CheckInternetConnection());
-            _loginService = new LoginService(Support.CheckInternetConnection());
+            _directorService = new DirectorService(GlobalClass.CheckCoonection);
+            _loginService = new LoginService(GlobalClass.CheckCoonection);
         }
 
         private void SaveDirector_Click(object sender, RoutedEventArgs e)

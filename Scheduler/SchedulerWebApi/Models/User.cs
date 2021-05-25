@@ -29,6 +29,11 @@ namespace SchedulerWebApi.Models
         /// <summary>
         /// 
         /// </summary>
+        public string CenterId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
         public string FirstName { get; set; }
 
         /// <summary>

@@ -1,13 +1,17 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Linq;
+using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Data;
+using System.Windows.Input;
 using System.Windows.Threading;
 using Newtonsoft.Json;
 using Scheduler.Models;
 using Scheduler.RestServices;
+using Scheduler.RestServices.Models;
 using Scheduler.RestServices.Models.Responses;
 
 namespace Scheduler.Views.Wards
@@ -18,24 +22,44 @@ namespace Scheduler.Views.Wards
     public partial class IndexPage : Page
     {
         private WardService _wardService;
-        private UserService _userService;
+        UserService _userService;
+        DivisionService _divisionService;
+        HealthFacilityService _healthFacilityService;
         private ObservableCollection<WardInfo> _wards;
+        private ObservableCollection<DivisionResponse> divList;
+        private ObservableCollection<UserResponse> userList;
+
+        UserResponse user;
+        UserResponse selectedInCharg;
+        DivisionResponse selectedDivision;
+
+
+        HealthFacilityResponse healthFacility;
         public IndexPage()
         {
             InitializeComponent();
             _wards = new ObservableCollection<WardInfo>();
-            _userService = new UserService(Support.CheckInternetConnection());
-            _wardService = new WardService(Support.CheckInternetConnection());
+            _wardService = new WardService(GlobalClass.CheckCoonection);
+            _divisionService = new DivisionService(GlobalClass.CheckCoonection);
+            _userService = new UserService(GlobalClass.CheckCoonection);
+            _healthFacilityService = new HealthFacilityService(GlobalClass.CheckCoonection);
+
+            var check = Support.TryGetSession("user", out string userData);
+            user = JsonConvert.DeserializeObject<UserResponse>(userData);
+
+            divList = new ObservableCollection<DivisionResponse>();
+            userList = new ObservableCollection<UserResponse>();
+
             WardDataList.ItemsSource = _wards;
 
-            AddItemToList();
+            //AddItemToList();
             ComboBoxItemsUI();
 
             
 
         }
 
-        public void LoadIncharge()
+        public void Wards()
         {
             //TODO: Load incharges
             var division = "";
@@ -64,16 +88,6 @@ namespace Scheduler.Views.Wards
             }
         }
 
-        private void PopupBox_Opened(object sender, RoutedEventArgs e)
-        {
-
-        }
-
-        private void PopupBox_Closed(object sender, RoutedEventArgs e)
-        {
-
-        }
-
         private void DialogHost_DialogClosing(object sender, MaterialDesignThemes.Wpf.DialogClosingEventArgs eventArgs)
         {
 
@@ -100,10 +114,12 @@ namespace Scheduler.Views.Wards
             var _response = _wardService.Add(new Ward
             {
                 Description = DescriptionBox.Text,
+                DivisionId = selectedDivision.Id,
                 Name = NameBox.Text,
-                InchargeId = InchargeBox.Text == "" ? null : InchargeBox.Text,
+                InchargeId = selectedInCharg.Id,
                 MaximumHoursAday = int.Parse(MaxHours.Text),
-                MinimunHoursAday = int.Parse(MinHours.Text)
+                MinimunHoursAday = int.Parse(MinHours.Text),
+                CenterId = healthFacility.Id
             });
 
 
@@ -120,7 +136,8 @@ namespace Scheduler.Views.Wards
                 Name = _response.Data.Name,
                 ID = _response.Data.Id,
                 MaximumHoursAday = int.Parse(MaxHours.Text),
-                MinimunHoursAday = int.Parse(MinHours.Text)
+                MinimunHoursAday = int.Parse(MinHours.Text),
+                CenterId = healthFacility.Id
             });
         }
 
@@ -174,6 +191,60 @@ namespace Scheduler.Views.Wards
                 MaxHours.Items.Add(i);
                 MinHours.Items.Add(i);
             }
+
+            Task.Run(() =>
+            {
+                healthFacility = _healthFacilityService.GetByDirector(user.Id).Data;
+                var divisionResponse = _divisionService.GetDivisionsByHealthCenter(healthFacility.Id);
+                if (divisionResponse.Check)
+                {
+                    foreach (var div in divisionResponse.Data)
+                    {
+                        divList.Add(div);
+                    }
+
+                    Dispatcher.Invoke(() =>
+                    {
+                        DivisionList.ItemsSource = divList;
+                    });
+                }
+
+                var usersResponse = _userService.GetUsersByCenter(healthFacility.Id);
+                if (usersResponse.Check)
+                {
+                    foreach (var _user in usersResponse.Data)
+                    {
+                        userList.Add(_user);
+                    }
+
+                    Dispatcher.Invoke(() =>
+                    {
+                        InchargeBox.ItemsSource = userList;
+                    });
+                }
+
+                var wards = _wardService.GetWardsByCenter(healthFacility.Id);
+                if (wards.Check)
+                {
+                    foreach (var ww in wards.Data)
+                    {
+                        Dispatcher.Invoke(() =>
+                        {
+                            _wards.Add(new WardInfo
+                            {
+                                Date = ww.CreatedOn.ToString(),
+                                Description = ww.Description,
+                                Incharge = _userService.GetUserByUserId(ww?.InchargeId)?.Data?.FirstName,
+                                Name = ww.Name,
+                                ID = ww.Id,
+                                MaximumHoursAday = ww.MaximumHoursAday,
+                                MinimunHoursAday = ww.MinimunHoursAday,
+                                CenterId = healthFacility.Id
+                            });
+                        });
+                    }
+                }
+            });
         }
 
         private void ViewListingForWard_Click(object sender, RoutedEventArgs e)
@@ -190,11 +261,30 @@ namespace Scheduler.Views.Wards
             var _window = new AllUser();
             _window.ShowDialog();
         }
+
+        private void InchargeBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            var item = InchargeBox.SelectedItem as UserResponse;
+            if (item != null)
+            {
+                selectedInCharg = item;
+            }
+        }
+
+        private void DivisionList_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            var item = DivisionList.SelectedItem as DivisionResponse;
+            if (item != null)
+            {
+                selectedDivision = item;
+            }
+        }
     }
     public class WardInfo
     {
         public string Name { get; set; }
         public string Incharge { get; set; }
+        public string CenterId { get; set; }
         public string Date { get; set; }
         public string Description { get; set; }
         public string ID { get; set; }

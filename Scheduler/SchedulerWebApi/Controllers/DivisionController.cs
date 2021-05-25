@@ -148,13 +148,13 @@ namespace SchedulerWebApi.Controllers
             var _division = _divisionService.Get(id);
             if (_division.check)
             {
-                _division = _divisionService.Update(new Models.Division
+                _division.division.Name = name;
+
+                if (healthFacilityId != null)
                 {
-                    Name = _division.division.Name = name,
-                    CreatedOn = _division.division.CreatedOn,
-                    Id = _division.division.Id,
-                    HealthFacilityId = healthFacilityId
-                });
+                    _division.division.HealthFacilityId = healthFacilityId;
+                }
+                _division = _divisionService.Update(_division.division);
             }
             return Ok(new
             {

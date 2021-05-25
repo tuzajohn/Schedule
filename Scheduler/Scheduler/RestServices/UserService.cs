@@ -21,8 +21,7 @@ namespace Scheduler.RestServices
         public Response<UserResponse> GetUserByAccountId(string id)
         {
             _restRequest = new RestRequest(Method.GET);
-            _restRequest.Resource = "users/account/{id}";
-            _restRequest.AddParameter("id", id);
+            _restRequest.Resource = $"users/account/{id}";
 
             var _response = _restClient.Execute<Response<UserResponse>>(_restRequest);
             if (!_response.IsSuccessful) { }
@@ -31,8 +30,7 @@ namespace Scheduler.RestServices
         public Response<UserResponse> GetUserByUserId(string id)
         {
             _restRequest = new RestRequest(Method.POST);
-            _restRequest.Resource = "user/getuserbyuserid";
-            _restRequest.AddParameter("id", id);
+            _restRequest.Resource = $"users/{id}";
 
             var _response = _restClient.Execute<Response<UserResponse>>(_restRequest);
             if (!_response.IsSuccessful) { }
@@ -43,8 +41,29 @@ namespace Scheduler.RestServices
             _restRequest = new RestRequest(Method.POST);
             _restRequest.Resource = "user/adduser";
             _restRequest.AddJsonBody(user);
+            _restRequest.AddHeader("xlog", "admin");
 
             var _response = _restClient.Execute<Response<UserResponse>>(_restRequest);
+            if (!_response.IsSuccessful) { }
+            return _response.Data;
+        }
+        public Response<UserResponse> UpdateUser(UserResponse user)
+        {
+            _restRequest = new RestRequest(Method.PUT);
+            _restRequest.Resource = $"users/{user.Id}";
+            _restRequest.AddJsonBody(user);
+            _restRequest.AddHeader("xlog", "admin");
+
+            var _response = _restClient.Execute<Response<UserResponse>>(_restRequest);
+            if (!_response.IsSuccessful) { }
+            return _response.Data;
+        }
+        public Response<List<UserResponse>> GetUsersByCenter(string centerId)
+        {
+            _restRequest = new RestRequest(Method.GET);
+            _restRequest.Resource = $"users/center/{centerId}";
+
+            var _response = _restClient.Execute<Response<List<UserResponse>>>(_restRequest);
             if (!_response.IsSuccessful) { }
             return _response.Data;
         }

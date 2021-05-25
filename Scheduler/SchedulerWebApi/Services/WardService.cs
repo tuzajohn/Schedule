@@ -26,7 +26,7 @@ namespace SchedulerWebApi.Services
         /// <returns></returns>
         public (Ward ward, string message, bool check) Add(Ward ward)
         {
-            var _ward = _context.Wards.Where(x => x.Name.Contains(ward.Name) || x.Id == ward.Id);
+            var _ward = _context.Wards.Where(x => x.Name.Contains(ward.Name) && x.DivisionId == ward.DivisionId);
             var message = "";
             var check = false;
             var data = new Ward();

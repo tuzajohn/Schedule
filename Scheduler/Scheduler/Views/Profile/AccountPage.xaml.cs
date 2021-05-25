@@ -25,10 +25,10 @@ namespace Scheduler.Views.Profile
         public AccountPage()
         {
             InitializeComponent();
-            _loginService = new LoginService(Support.CheckInternetConnection());
-            _userService = new UserService(Support.CheckInternetConnection());
-            _wardService = new WardService(Support.CheckInternetConnection());
-            _divisionService = new DivisionService(Support.CheckInternetConnection());
+            _loginService = new LoginService(GlobalClass.CheckCoonection);
+            _userService = new UserService(GlobalClass.CheckCoonection);
+            _wardService = new WardService(GlobalClass.CheckCoonection);
+            _divisionService = new DivisionService(GlobalClass.CheckCoonection);
 
             timer.Interval = TimeSpan.FromSeconds(5);
 

@@ -211,6 +211,9 @@ namespace SchedulerWebApi.Migrations
                     b.Property<string>("Address")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("CenterId")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("Contact")
                         .HasColumnType("nvarchar(max)");
 
@@ -256,6 +259,9 @@ namespace SchedulerWebApi.Migrations
                 {
                     b.Property<string>("Id")
                         .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("CenterId")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime>("CreatedOn")
                         .HasColumnType("datetime2");

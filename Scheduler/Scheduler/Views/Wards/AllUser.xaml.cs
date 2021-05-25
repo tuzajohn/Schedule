@@ -22,8 +22,8 @@ namespace Scheduler.Views.Wards
         {
             InitializeComponent();
             _userList = new ObservableCollection<User>();
-            _userService = new UserService(Support.CheckInternetConnection());
-            _wardService = new WardService(Support.CheckInternetConnection());
+            _userService = new UserService(GlobalClass.CheckCoonection);
+            _wardService = new WardService(GlobalClass.CheckCoonection);
 
             LoadUsers();
             Support.TryGetSession("ward-name", out string title);

@@ -1,6 +1,7 @@
 ﻿using System.Collections.ObjectModel;
 using System.Linq;
 using System.Windows.Controls;
+using Scheduler.Models;
 using Scheduler.RestServices;
 using Scheduler.RestServices.Models;
 
@@ -17,7 +18,7 @@ namespace Scheduler.Views.SuperUser
         {
             InitializeComponent();
             _healthFacilities = new ObservableCollection<HealthFacilityResponse>();
-            _healthFacilityService = new HealthFacilityService(Support.CheckInternetConnection());
+            _healthFacilityService = new HealthFacilityService(GlobalClass.CheckCoonection);
 
             var list = _healthFacilityService.Get();
             list.ForEach(x =>

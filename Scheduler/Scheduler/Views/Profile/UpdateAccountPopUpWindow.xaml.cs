@@ -134,7 +134,7 @@ namespace Scheduler.Views.Profile
             }
             Dispatcher.Invoke(() =>
             {
-                var _ward = new WardService(Support.CheckInternetConnection()).Update(WardId, new Ward { Name = _name, Description = _description, DivisionId = DivisionId });
+                var _ward = new WardService(GlobalClass.CheckCoonection).Update(WardId, new Ward { Name = _name, Description = _description, DivisionId = DivisionId });
                 if (_ward.Check)
                 {
                     var wardCheck = Support.TryGetSession("account_ward", out string wardString);

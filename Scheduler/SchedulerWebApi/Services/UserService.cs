@@ -92,28 +92,34 @@ namespace SchedulerWebApi.Services
 
         public (User user, string message, bool check) Update(User user)
         {
-            var _users = _context.Users.Find(user.Id);
             var message = "";
             var check = false;
-            if (_users is null)
-                message = "Oops, it appears that this personel does not exist.";
-            else
+            try
             {
-                try
+                _context.Users.Update(user);
+                var count = _context.SaveChanges();
+                if (count == 0)
                 {
-                    _context.Users.Update(user);
-                    _context.SaveChanges();
+                    user = null;
+                    check = true;
+                    message = "Failed to update information.";
+                }
+                else
+                {
                     check = true;
                     message = "Successfully updates account information.";
                 }
-                catch (Exception)
-                {
-                    message = "Oops, Something went wrong please try again later!";
-                }
+                check = true;
+                message = "Successfully updates account information.";
+            }
+            catch (Exception)
+            {
+                message = "Oops, Something went wrong please try again later!";
 
+                user = null;
             }
 
-            return (_users, message, check);
+            return (user, message, check);
         }
     }
 }

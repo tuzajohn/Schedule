@@ -53,7 +53,10 @@ namespace SchedulerWebApi.Controllers
                 Name = ward.Name,
                 MaximumHoursAday = ward.MaximumHoursAday,
                 MinimunHoursAday = ward.MinimunHoursAday,
-                NumberOfWorkers = ward.NumberOfWorkers
+                NumberOfWorkers = ward.NumberOfWorkers,
+                CenterId = ward.CenterId,
+                DivisionId = ward.DivisionId,
+                InchargeId = ward.InChargeId
             });
 
             return Ok(new ApiResponse<Ward>
@@ -140,6 +143,48 @@ namespace SchedulerWebApi.Controllers
         }
 
         /// <summary>
+        /// Fetches all wards by division
+        /// </summary>
+        /// <returns></returns>
+        [HttpGet]
+        [Route("wards/division/{id}")]
+        public IActionResult GetAllWardsByDivision(string id)
+        {
+            (IEnumerable<Ward> wards, string message, bool check) wards = _wardService.Get();
+
+            wards.wards = wards.wards.Where(x => x.DivisionId == id)
+                .ToList();
+
+            return Ok(new ApiResponse<IEnumerable<Ward>>
+            {
+                Data = wards.wards.OrderByDescending(x => x.CreatedOn),
+                Check = wards.wards.Count() == 0 ? false : true,
+                Message = wards.message
+            });
+        }
+
+        /// <summary>
+        /// Fetches all wards by center
+        /// </summary>
+        /// <returns></returns>
+        [HttpGet]
+        [Route("wards/center/{id}")]
+        public IActionResult GetAllWardsByCenter(string id)
+        {
+            (IEnumerable<Ward> wards, string message, bool check) wards = _wardService.Get();
+
+            wards.wards = wards.wards.Where(x => x.CenterId == id)
+                .ToList();
+
+            return Ok(new ApiResponse<IEnumerable<Ward>>
+            {
+                Data = wards.wards.OrderByDescending(x => x.CreatedOn),
+                Check = wards.wards.Count() == 0 ? false : true,
+                Message = wards.message
+            });
+        }
+
+        /// <summary>
         /// Update certain ward details
         /// </summary>
         /// <param name="id">Ward Id</param>
@@ -204,6 +249,11 @@ namespace SchedulerWebApi.Controllers
         /// 
         /// </summary>
         public string DivisionId { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public string CenterId { get; set; }
         /// <summary>
         /// 
         /// </summary>

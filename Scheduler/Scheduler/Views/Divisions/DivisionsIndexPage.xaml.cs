@@ -1,4 +1,5 @@
 ﻿using Newtonsoft.Json;
+using Scheduler.Models;
 using Scheduler.RestServices;
 using Scheduler.RestServices.Models;
 using Scheduler.RestServices.Models.Responses;
@@ -35,24 +36,29 @@ namespace Scheduler.Views.Divisions
         public DivisionsIndexPage()
         {
             InitializeComponent();
-            _divisionService = new DivisionService(Support.CheckInternetConnection());
-            _healthFacilityService = new HealthFacilityService(Support.CheckInternetConnection());
+            _divisionService = new DivisionService(GlobalClass.CheckCoonection);
+            _healthFacilityService = new HealthFacilityService(GlobalClass.CheckCoonection);
             divisions.ItemsSource = divisionList = new ObservableCollection<dynamic>();
             user = new UserResponse();
+            
             Task.Run(() =>
             {
-                var check = Support.TryGetSession("user", out string loginData);
+                var check = Support.TryGetSession("user", out string userData);
                 if (check)
                 {
-                    user = JsonConvert.DeserializeObject<Response<UserResponse>>(loginData).Data;
+                    user = JsonConvert.DeserializeObject<UserResponse>(userData);
                     healthFacility = _healthFacilityService.GetByDirector(user.Id).Data;
+                    Dispatcher.Invoke(() =>
+                    {
+                        LoadDivisions();
+                    });
                 }
             });
         }
 
         private void AddnewDirectorBtn_Click(object sender, RoutedEventArgs e)
         {
-            var newDivision = new NewDivision(_divisionService, _healthFacilityService, user, healthFacility);
+            var newDivision = new NewDivision(_divisionService, _healthFacilityService, user, healthFacility, divisionList);
             newDivision.ShowDialog();
         }
 
@@ -71,6 +77,17 @@ namespace Scheduler.Views.Divisions
                         division.Id
                     });
                 }
+            }
+        }
+
+        private void ListViewItem_PreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            var item = sender as ListViewItem;
+            if (item != null && item.IsSelected)
+            {
+                var value = (dynamic)item.Content;
+                var newDivision = new ViewEditDeleteDivision(_divisionService, _healthFacilityService, user, healthFacility, value, divisionList);
+                newDivision.ShowDialog();
             }
         }
     }

@@ -29,7 +29,7 @@ namespace Scheduler.Views.Wards
 
             _wardService = new WardService();
             Id = id;
-            var ward = new WardService(Support.CheckInternetConnection()).GetWardById(id);
+            var ward = new WardService(GlobalClass.CheckCoonection).GetWardById(id);
             WardName.Text = ward.Data.Name;
             WardDescription.Text = ward.Data.Description;
             MinHours.Text = ward.Data.MinimunHoursAday.ToString();

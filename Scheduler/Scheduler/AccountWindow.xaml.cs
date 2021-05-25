@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using Newtonsoft.Json;
+using Scheduler.Models;
 using Scheduler.RestServices;
 using Scheduler.RestServices.Models.Responses;
 using Scheduler.Views.Shared;
@@ -28,17 +29,22 @@ namespace Scheduler
         public AccountWindow()
         {
             InitializeComponent();
-            _loginService = new LoginService(Support.CheckInternetConnection());
-            _userService = new UserService(Support.CheckInternetConnection());
-            if (!Support.CheckInternetConnection())
+            GlobalClass.CheckCoonection = Support.CheckInternetConnection();
+            _loginService = new LoginService(GlobalClass.CheckCoonection);
+            _userService = new UserService(GlobalClass.CheckCoonection);
+            if (!GlobalClass.CheckCoonection)
             {
                 MessageBox.Show("Check your internet connection");
                 Support.DestroySession("user");
+                Support.DestroySession("userAccount");
                 //Close();
             }
 
             if (Support.TryGetSession("user", out _))
                 Support.DestroySession("user");
+
+            if (Support.TryGetSession("userAccount", out _))
+                Support.DestroySession("userAccount");
         }
 
         private void LoginBtn_Click(object sender, RoutedEventArgs e)
@@ -56,7 +62,7 @@ namespace Scheduler
 
             Task.WaitAll(ls.ToArray());
             LoginBtn.Content = "Login";
-            //if (!Support.CheckInternetConnection())
+            //if (!GlobalClass.CheckCoonection)
             //{
             //    MessageBox.Show("Oops, no internet connection");
             //    return;
@@ -84,6 +90,7 @@ namespace Scheduler
             }
 
             var user = _userService.GetUserByAccountId(_response.Data.Id);
+
 
             Support.CreateSession("userAccount", JsonConvert.SerializeObject(_response.Data));
             Support.CreateSession("user", JsonConvert.SerializeObject(user.Data));

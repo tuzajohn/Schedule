@@ -1,6 +1,7 @@
 ﻿using System.Collections.ObjectModel;
 using System.Windows;
 using System.Windows.Controls;
+using Scheduler.Models;
 using Scheduler.RestServices;
 using Scheduler.RestServices.Models;
 
@@ -17,8 +18,8 @@ namespace Scheduler.Views.SuperUser
         public HealthFacility()
         {
             InitializeComponent();
-            _healthFacilityService = new HealthFacilityService(Support.CheckInternetConnection());
-            _directorService = new DirectorService(Support.CheckInternetConnection());
+            _healthFacilityService = new HealthFacilityService(GlobalClass.CheckCoonection);
+            _directorService = new DirectorService(GlobalClass.CheckCoonection);
             healthFacilityResponses = new ObservableCollection<HealthFacilityResponse>();
             LoadDirector();
 

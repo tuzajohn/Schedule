@@ -24,6 +24,7 @@ namespace Scheduler.RestServices
             _restRequest.Resource = "divisions/{id}?name={name}";
             _restRequest.AddParameter("id", id);
             _restRequest.AddParameter("name", name);
+            _restRequest.AddHeader("xlog", "my api");
 
             var _response = _restClient.Execute<Response<DivisionResponse>>(_restRequest);
             if (!_response.IsSuccessful) { }
@@ -74,7 +75,7 @@ namespace Scheduler.RestServices
         public Response<List<DivisionResponse>> GetDivisionsByHealthCenter(string id)
         {
             _restRequest = new RestRequest(Method.GET);
-            _restRequest.Resource = "divisions/healthcenter/{id}";
+            _restRequest.Resource = $"divisions/healthcenter/{id}";
 
             var _response = _restClient.Execute<Response<List<DivisionResponse>>>(_restRequest);
             if (!_response.IsSuccessful) { }

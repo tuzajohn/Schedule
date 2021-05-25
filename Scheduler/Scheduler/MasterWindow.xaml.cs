@@ -2,6 +2,7 @@
 using System.Windows;
 using System.Windows.Threading;
 using Newtonsoft.Json;
+using Scheduler.Models;
 using Scheduler.RestServices;
 using Scheduler.RestServices.Models.Responses;
 using Scheduler.Views.Divisions;
@@ -30,8 +31,8 @@ namespace Scheduler
             Top = (screenHeight / 2) - (windowHeight / 2);
             #endregion
 
-            _userService = new UserService(Support.CheckInternetConnection());
-            var check = Support.TryGetSession("user", out string data);
+            _userService = new UserService(GlobalClass.CheckCoonection);
+            var check = Support.TryGetSession("userAccount", out string data);
             if (!check)
             {
                 new AccountWindow().Show();

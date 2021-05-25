@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -12,9 +13,12 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Newtonsoft.Json;
 using Scheduler.Models;
 using Scheduler.RestServices;
+using Scheduler.RestServices.Models;
 using Scheduler.RestServices.Models.Responses;
+using Scheduler.Views.Wards;
 
 namespace Scheduler.Views.Users
 {
@@ -26,23 +30,58 @@ namespace Scheduler.Views.Users
         private LoginService _loginService;
         private UserService _userService;
         private WardService _wardService;
+
+        private ObservableCollection<Ward> _wards;
+        private ObservableCollection<DivisionResponse> divList;
+        private ObservableCollection<UserResponse> userList;
+
+        DivisionService _divisionService;
+        HealthFacilityService _healthFacilityService;
+
+        UserResponse user;
+        HealthFacilityResponse healthFacility;
+
+        Ward selectedWard;
+        DivisionResponse selectedDivision;
         public AddUsers()
         {
             InitializeComponent();
-            _loginService = new LoginService(Support.CheckInternetConnection());
-            _userService = new UserService(Support.CheckInternetConnection());
-            _wardService = new WardService(Support.CheckInternetConnection());
+            _loginService = new LoginService(GlobalClass.CheckCoonection);
+            _userService = new UserService(GlobalClass.CheckCoonection);
+            _wardService = new WardService(GlobalClass.CheckCoonection);
+            _healthFacilityService = new HealthFacilityService(GlobalClass.CheckCoonection);
+            _divisionService = new DivisionService(GlobalClass.CheckCoonection);
+
+            DivisionBox.ItemsSource = divList = new ObservableCollection<DivisionResponse>();
+            WardComboBox.ItemsSource = _wards = new ObservableCollection<Ward>();
+
+            var check = Support.TryGetSession("user", out string userData);
+            user = JsonConvert.DeserializeObject<UserResponse>(userData);
 
             PopulateWardList();
 
         }
         void PopulateWardList()
         {
-            var _wards = _wardService.GetWards();
-            foreach (var _ward in _wards?.Data)
+
+            Task.Run(() =>
             {
-                WardComboBox.Items.Add(_ward.Name);
-            }
+                healthFacility = _healthFacilityService.GetByDirector(user.Id).Data;
+                var divisionResponse = _divisionService.GetDivisionsByHealthCenter(healthFacility.Id);
+                if (divisionResponse.Check)
+                {
+                    foreach (var div in divisionResponse.Data)
+                    {
+                        Dispatcher.Invoke(() =>
+                        {
+                            divList.Add(div);
+                        });
+                    }
+
+                    
+                }
+                
+            });
         }
         private void SaveUser_Click(object sender, RoutedEventArgs e)
         {
@@ -96,7 +135,7 @@ namespace Scheduler.Views.Users
                 FirstName = Fname.Text,
                 LastName = Lname.Text,
                 Gender = Gender.Text,
-                Ward = _loggedInUser.Id
+                Ward = selectedWard.Id
             };
 
             var userResponse = _userService.SendUser(user);
@@ -111,6 +150,40 @@ namespace Scheduler.Views.Users
             masterWindow.controlInstance.Content = new AllUsers();
             masterWindow.CancelAddUserBtn.Visibility = Visibility.Collapsed;
             masterWindow.AddUserBtn.Visibility = Visibility.Visible;
+        }
+
+        private void DivisionBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            var item = DivisionBox.SelectedItem as DivisionResponse;
+            if (item != null)
+            {
+                selectedDivision = item;
+                Task.Run(() =>
+                {
+                    var wards = _wardService.GetWardsByDivision(selectedDivision.Id);
+                    if (wards.Check)
+                    {
+                        foreach (var ward in wards.Data)
+                        {
+                            Dispatcher.Invoke(() =>
+                            {
+                                _wards.Add(ward);
+                            });
+                        }
+                    }
+                });
+            }
+            
+        }
+
+        private void WardComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            var item = WardComboBox.SelectedItem as Ward;
+            if (item != null)
+            {
+                selectedWard = item;
+                
+            }
         }
     }
 }

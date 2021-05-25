@@ -21,8 +21,7 @@ namespace Scheduler.RestServices
         public Response<HealthFacilityResponse> GetByDirector(string id)
         {
             _restRequest = new RestRequest(Method.GET);
-            _restRequest.Resource = "healthfacility/director/{id}";
-            _restRequest.AddUrlSegment("id", id);
+            _restRequest.Resource = $"healthfacility/director/{id}";
 
             try
             {
