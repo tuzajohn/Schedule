@@ -29,9 +29,10 @@ namespace Scheduler.RestServices
         }
         public Response<UserResponse> GetUserByUserId(string id)
         {
-            _restRequest = new RestRequest(Method.POST);
+            _restRequest = new RestRequest(Method.GET);
             _restRequest.Resource = $"users/{id}";
 
+            _restRequest.AddHeader("xlog", "admin");
             var _response = _restClient.Execute<Response<UserResponse>>(_restRequest);
             if (!_response.IsSuccessful) { }
             return _response.Data;

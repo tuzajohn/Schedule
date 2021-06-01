@@ -31,7 +31,7 @@ namespace Scheduler.RestServices
         public Response<LoginResponse> SendLogin(Account login)
         {
             _restRequest = new RestRequest(Method.POST);
-            _restRequest.Resource = "accounts?email={email}&password={password}";
+            _restRequest.Resource = "accounts?email={email}&password={password}&isadmin={isadmin}";
             _restRequest.AddUrlSegment("email", login.Email);
             _restRequest.AddUrlSegment("password", login.Password);
             _restRequest.AddUrlSegment("isadmin", login.IsAdmin.ToString());
@@ -57,7 +57,7 @@ namespace Scheduler.RestServices
 
         public Response<LoginResponse> GetAccount(string id)
         {
-            _restRequest = new RestRequest(Method.PATCH);
+            _restRequest = new RestRequest(Method.GET);
             _restRequest.Resource = "accounts/{id}";
             _restRequest.AddUrlSegment("id", id);
             _restRequest.AddHeader("xlog", "my api");

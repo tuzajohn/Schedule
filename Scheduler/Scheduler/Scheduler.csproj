@@ -158,6 +158,9 @@
     <Compile Include="Views\Shifts\Index.xaml.cs">
       <DependentUpon>Index.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\Shifts\ShiftsForUser.xaml.cs">
+      <DependentUpon>ShiftsForUser.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\SuperUser\Dashboard.xaml.cs">
       <DependentUpon>Dashboard.xaml</DependentUpon>
     </Compile>
@@ -175,6 +178,9 @@
     </Compile>
     <Compile Include="Views\Users\AllUsers.xaml.cs">
       <DependentUpon>AllUsers.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Users\ViewUser.xaml.cs">
+      <DependentUpon>ViewUser.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\Wards\AllUser.xaml.cs">
       <DependentUpon>AllUser.xaml</DependentUpon>
@@ -244,6 +250,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Views\Shifts\ShiftsForUser.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\SuperUser\Dashboard.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -265,6 +275,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\Users\AllUsers.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Users\ViewUser.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

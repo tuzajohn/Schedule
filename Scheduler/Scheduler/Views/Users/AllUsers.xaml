@@ -27,7 +27,7 @@
 
                         <materialDesign:Card Background="{DynamicResource PrimaryHueDarkBrush}"
                                              Foreground="{DynamicResource PrimaryHueDarkForegroundBrush}"
-                                             Padding="0" Width="200">
+                                             Padding="0" Width="240">
                             <Grid>
                                 <Grid.RowDefinitions>
                                     <RowDefinition Height="Auto" />
@@ -45,7 +45,7 @@
                                 <Separator Grid.Row="2"
                                            Style="{StaticResource MaterialDesignLightSeparator}" />
                                 
-                                <TextBlock Grid.Row="3" Margin="16 0 16 8"
+                                <TextBlock Grid.Row="3" Margin="16 0 18 8"
                                            VerticalAlignment="Center"
                                            HorizontalAlignment="Left"
                                            Style="{StaticResource MaterialDesignBody2TextBlock}" Text="{Binding Date}"/>
@@ -59,6 +59,20 @@
                                             materialDesign:RippleAssist.IsCentered="True"
                                             Click="Button_Click">
                                         <materialDesign:PackIcon Kind="Phone" />
+                                    </Button>
+                                    <Button HorizontalAlignment="Right"
+                                            Style="{StaticResource MaterialDesignToolForegroundButton}"
+                                            Width="30" Padding="2 0 2 0"
+                                            materialDesign:RippleAssist.IsCentered="True"
+                                            Click="ViewUSerBtn_Click">
+                                        <materialDesign:PackIcon Kind="User" />
+                                    </Button>
+                                    <Button HorizontalAlignment="Right"
+                                            Style="{StaticResource MaterialDesignToolForegroundButton}"
+                                            Width="30" Padding="2 0 2 0"
+                                            materialDesign:RippleAssist.IsCentered="True"
+                                            Click="ViewShiftsUserBtn_Click">
+                                        <materialDesign:PackIcon Kind="FormatListNumbered" />
                                     </Button>
                                 </StackPanel>
                             </Grid>

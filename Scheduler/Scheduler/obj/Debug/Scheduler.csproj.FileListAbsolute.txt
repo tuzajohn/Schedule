@@ -371,3 +371,7 @@ C:\Users\circuit\source\repos\Schedule\Scheduler\Scheduler\obj\Debug\Views\Divis
 C:\Users\circuit\source\repos\Schedule\Scheduler\Scheduler\obj\Debug\Views\Divisions\NewDivision.baml
 C:\Users\circuit\source\repos\Schedule\Scheduler\Scheduler\obj\Debug\Views\Divisions\ViewEditDeleteDivision.g.cs
 C:\Users\circuit\source\repos\Schedule\Scheduler\Scheduler\obj\Debug\Views\Divisions\ViewEditDeleteDivision.baml
+C:\Users\circuit\source\repos\Schedule\Scheduler\Scheduler\obj\Debug\Views\Users\ViewUser.g.cs
+C:\Users\circuit\source\repos\Schedule\Scheduler\Scheduler\obj\Debug\Views\Users\ViewUser.baml
+C:\Users\circuit\source\repos\Schedule\Scheduler\Scheduler\obj\Debug\Views\Shifts\ShiftsForUser.g.cs
+C:\Users\circuit\source\repos\Schedule\Scheduler\Scheduler\obj\Debug\Views\Shifts\ShiftsForUser.baml
