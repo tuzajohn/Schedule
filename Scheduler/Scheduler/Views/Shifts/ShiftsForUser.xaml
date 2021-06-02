@@ -8,6 +8,21 @@
       xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         Title="ShiftsForUser" Height="450" Width="800">
     <Grid>
-        
+        <materialDesign:Card Foreground="White"
+                             VerticalAlignment="Stretch">
+        <StackPanel Grid.ColumnSpan="2" Margin="10,0" Grid.Row="2">
+                <ListView ItemsSource="{Binding shiftsList}" Foreground="#ffffff" Name="shiftsListView">
+                <ListView.View>
+                    <GridView>
+                            <GridViewColumn DisplayMemberBinding="{Binding WardName}" Header="Name of Ward / Department" />
+                            <GridViewColumn DisplayMemberBinding="{Binding StartDay}" Header="StartDay" />
+                            <GridViewColumn DisplayMemberBinding="{Binding EndDay}" Header="EndDay" />
+                            <GridViewColumn DisplayMemberBinding="{Binding StartTime}" Header="Starting time" />
+                            <GridViewColumn DisplayMemberBinding="{Binding EndTime}" Header="Ending time" />
+                    </GridView>
+                </ListView.View>
+            </ListView>
+            </StackPanel>
+        </materialDesign:Card>
     </Grid>
 </Window>

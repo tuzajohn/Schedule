@@ -111,6 +111,7 @@
     <Compile Include="Models\GlobalClass.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Models\UserResponse.cs" />
+    <Compile Include="Models\ViewModel\ShiftViewModel.cs" />
     <Compile Include="Models\ViewModel\WardViewModel.cs" />
     <Compile Include="Models\Ward.cs" />
     <Compile Include="RestServices\AppSettings.cs" />
@@ -157,6 +158,9 @@
     </Compile>
     <Compile Include="Views\Shifts\Index.xaml.cs">
       <DependentUpon>Index.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Shifts\SetingShiftPage.xaml.cs">
+      <DependentUpon>SetingShiftPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\Shifts\ShiftsForUser.xaml.cs">
       <DependentUpon>ShiftsForUser.xaml</DependentUpon>
@@ -247,6 +251,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\Shifts\Index.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Shifts\SetingShiftPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

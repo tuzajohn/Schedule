@@ -7,6 +7,7 @@ using Scheduler.RestServices;
 using Scheduler.RestServices.Models.Responses;
 using Scheduler.Views.Divisions;
 using Scheduler.Views.Profile;
+using Scheduler.Views.Shifts;
 using Scheduler.Views.Users;
 using Scheduler.Views.Wards;
 
@@ -103,6 +104,11 @@ namespace Scheduler
         private void DivisionPageBtn_Click(object sender, RoutedEventArgs e)
         {
             controlInstance.Content = new DivisionsIndexPage();
+        }
+
+        private void ShiftPage_Click(object sender, RoutedEventArgs e)
+        {
+            controlInstance.Content = new SetingShiftPage();
         }
     }
 }

@@ -375,3 +375,5 @@ C:\Users\circuit\source\repos\Schedule\Scheduler\Scheduler\obj\Debug\Views\Users
 C:\Users\circuit\source\repos\Schedule\Scheduler\Scheduler\obj\Debug\Views\Users\ViewUser.baml
 C:\Users\circuit\source\repos\Schedule\Scheduler\Scheduler\obj\Debug\Views\Shifts\ShiftsForUser.g.cs
 C:\Users\circuit\source\repos\Schedule\Scheduler\Scheduler\obj\Debug\Views\Shifts\ShiftsForUser.baml
+C:\Users\circuit\source\repos\Schedule\Scheduler\Scheduler\obj\Debug\Views\Shifts\SetingShiftPage.g.cs
+C:\Users\circuit\source\repos\Schedule\Scheduler\Scheduler\obj\Debug\Views\Shifts\SetingShiftPage.baml

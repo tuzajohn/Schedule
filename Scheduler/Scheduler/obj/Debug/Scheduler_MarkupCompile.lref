@@ -12,15 +12,16 @@ FC:\Users\circuit\source\repos\Schedule\Scheduler\Scheduler\Views\Profile\Update
 FC:\Users\circuit\source\repos\Schedule\Scheduler\Scheduler\Views\Shared\Loader.xaml;;
 FC:\Users\circuit\source\repos\Schedule\Scheduler\Scheduler\Views\Shared\SuperUserLayout.xaml;;
 FC:\Users\circuit\source\repos\Schedule\Scheduler\Scheduler\Views\Shifts\Index.xaml;;
+FC:\Users\circuit\source\repos\Schedule\Scheduler\Scheduler\Views\Shifts\ShiftsForUser.xaml;;
 FC:\Users\circuit\source\repos\Schedule\Scheduler\Scheduler\Views\SuperUser\Dashboard.xaml;;
 FC:\Users\circuit\source\repos\Schedule\Scheduler\Scheduler\Views\SuperUser\Directors.xaml;;
 FC:\Users\circuit\source\repos\Schedule\Scheduler\Scheduler\Views\SuperUser\HealthFacility.xaml;;
 FC:\Users\circuit\source\repos\Schedule\Scheduler\Scheduler\Views\SuperUser\NewDirector.xaml;;
 FC:\Users\circuit\source\repos\Schedule\Scheduler\Scheduler\Views\Users\AddUsers.xaml;;
 FC:\Users\circuit\source\repos\Schedule\Scheduler\Scheduler\Views\Users\AllUsers.xaml;;
+FC:\Users\circuit\source\repos\Schedule\Scheduler\Scheduler\Views\Users\ViewUser.xaml;;
 FC:\Users\circuit\source\repos\Schedule\Scheduler\Scheduler\Views\Wards\AllUser.xaml;;
 FC:\Users\circuit\source\repos\Schedule\Scheduler\Scheduler\Views\Wards\EditWardWindow.xaml;;
 FC:\Users\circuit\source\repos\Schedule\Scheduler\Scheduler\Views\Wards\IndexPage.xaml;;
-FC:\Users\circuit\source\repos\Schedule\Scheduler\Scheduler\Views\Users\ViewUser.xaml;;
-FC:\Users\circuit\source\repos\Schedule\Scheduler\Scheduler\Views\Shifts\ShiftsForUser.xaml;;
+FC:\Users\circuit\source\repos\Schedule\Scheduler\Scheduler\Views\Shifts\SetingShiftPage.xaml;;
 
