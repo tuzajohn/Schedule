@@ -14,16 +14,21 @@ namespace Scheduler.Views.SuperUser
     {
         ObservableCollection<HealthFacilityResponse> _healthFacilities;
         HealthFacilityService _healthFacilityService;
+        DirectorService _directorService;
         public Dashboard()
         {
             InitializeComponent();
             _healthFacilities = new ObservableCollection<HealthFacilityResponse>();
             _healthFacilityService = new HealthFacilityService(GlobalClass.CheckCoonection);
+            _directorService = new DirectorService(GlobalClass.CheckCoonection);
 
             var list = _healthFacilityService.Get();
             list.ForEach(x =>
             {
-                _healthFacilities.Add(x);
+                var director = _directorService.GetDirector(x.Director);
+                var tt = x;
+                tt.Director = director?.Name;
+                _healthFacilities.Add(tt);
             });
 
 

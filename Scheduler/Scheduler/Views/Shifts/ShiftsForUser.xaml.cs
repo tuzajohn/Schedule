@@ -62,15 +62,25 @@ namespace Scheduler.Views.Shifts
                             WardName = ward.Data.Name,
                             EndDay = new DateTime(DateTime.UtcNow.Year, DateTime.UtcNow.Month, shift.EndDay).ToString("MM/dd/yyyy"),
                             StartDay = new DateTime(DateTime.UtcNow.Year, DateTime.UtcNow.Month, shift.StartDay).ToString("MM/dd/yyyy"),
-                            EndTime = shift.EndTime.ToString("hh:mm tt"),
-                            StartTime = shift.StartTime.ToString("hh:mm tt")
+                            EndTime = shift.EndTime.hours + ":" + shift.EndTime.minutes,
+                            StartTime = shift.StartTime.hours + ":" + shift.StartTime.minutes
                         };
 
-                        shiftsList.Add(shiftData);
+                        Dispatcher.Invoke(() => { shiftsList.Add(shiftData); });
                     }
                 }
             });
 
+        }
+
+        private void ListViewItem_PreviewMouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            var item = sender as ListViewItem;
+            if (item != null && item.IsSelected)
+            {
+                var value = (ShiftViewModel)item.Content;
+                new ViewSingleShift(value).ShowDialog();
+            }
         }
     }
 }

@@ -147,19 +147,7 @@
                     HorizontalAlignment="Stretch">
                     <TextBlock TextAlignment="Left"><materialDesign:PackIcon Kind="FormatListBulletedType" /> Division</TextBlock>
             </Button>
-            
-            <Button Style="{StaticResource MaterialDesignRaisedLightButton}"
-                    Margin="0 5 0 0"
-                    VerticalAlignment="Top"
-                    ToolTip="Wards" Name="WardPageBtn"
-                    Click="WardPageBtn_Click" HorizontalContentAlignment="Left"
-                    materialDesign:ShadowAssist.ShadowDepth="Depth4"
-                    materialDesign:RippleAssist.Feedback="#DD000000"
-                    HorizontalAlignment="Stretch">
-                    <TextBlock TextAlignment="Left"><materialDesign:PackIcon Kind="Hospital" /> Ward</TextBlock>
-            </Button>
-            
-            <Button Style="{StaticResource MaterialDesignRaisedLightButton}"
+                <Button Style="{StaticResource MaterialDesignRaisedLightButton}"
                     Margin="0 5 0 0"
                     VerticalAlignment="Top"
                     ToolTip="Users" Name="UserPageBtn"
@@ -170,6 +158,18 @@
 
                     <TextBlock> <materialDesign:PackIcon Kind="AccountGroupOutline" /> Users</TextBlock>
                 </Button>
+                <Button Style="{StaticResource MaterialDesignRaisedLightButton}"
+                    Margin="0 5 0 0"
+                    VerticalAlignment="Top"
+                    ToolTip="Wards" Name="WardPageBtn"
+                    Click="WardPageBtn_Click" HorizontalContentAlignment="Left"
+                    materialDesign:ShadowAssist.ShadowDepth="Depth4"
+                    materialDesign:RippleAssist.Feedback="#DD000000"
+                    HorizontalAlignment="Stretch">
+                    <TextBlock TextAlignment="Left"><materialDesign:PackIcon Kind="Hospital" /> Ward</TextBlock>
+            </Button>
+            
+
             
             <Button Style="{StaticResource MaterialDesignRaisedLightButton}"
                     Margin="0 5 0 0"

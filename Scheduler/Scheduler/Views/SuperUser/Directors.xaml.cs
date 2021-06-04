@@ -28,11 +28,13 @@ namespace Scheduler.Views.SuperUser
         HealthFacilityService _healthFacilityService;
         private DirectorService _directorService;
         private LoginService loginService;
+        private UserService userService;
         public Directors()
         {
             InitializeComponent();
             _directorService = new DirectorService(GlobalClass.CheckCoonection);
             loginService = new LoginService(GlobalClass.CheckCoonection);
+            userService = new UserService(GlobalClass.CheckCoonection);
 
             directors.ItemsSource = DirectorList = new ObservableCollection<DirectorViewModel>();
             LoadDirectors();
@@ -44,12 +46,12 @@ namespace Scheduler.Views.SuperUser
 
             foreach (var director in directorResponse)
             {
-                var account = loginService.GetAccount(director.Id);
+                var account = loginService.GetAccount(director.AccountId);
                 DirectorList.Add(new DirectorViewModel
                 {
                     Id = director.Id,
                     Name = director.Name,
-                    Username = account.Data?.Email,
+                    Username = account?.Data?.Email,
                     CreatedOn = director.CreatedOn.ToString("MM/dd/yyyy")
                 });
             }

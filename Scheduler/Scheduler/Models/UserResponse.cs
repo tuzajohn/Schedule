@@ -15,6 +15,7 @@ namespace Scheduler.Models
         public string Email { get; set; }
         public string Gender { get; set; }
         public string Ward { get; set; }
+        public string CenterId { get; set; }
         public DateTime DoB { get; set; }
         public DateTime CreatedOn { get; set; }
     }

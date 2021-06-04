@@ -24,5 +24,10 @@ namespace Scheduler.Views.Shifts
         {
             InitializeComponent();
         }
+
+        private void AddnewScheduleBtn_Click(object sender, RoutedEventArgs e)
+        {
+            new Index().ShowDialog();
+        }
     }
 }

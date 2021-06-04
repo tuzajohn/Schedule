@@ -26,7 +26,15 @@ namespace SchedulerWebApi.Controllers
                     message = "Name is required"
                 });
             }
-            var _director = new Director { CreatedOn = DateTime.UtcNow, Dob = director.Dob, Id = Guid.NewGuid().ToString("N"), IsDeleted = false, Name = director.Name };
+            var _director = new Director
+            {
+                CreatedOn = DateTime.UtcNow,
+                Dob = director.Dob,
+                Id = Guid.NewGuid().ToString("N"),
+                IsDeleted = false,
+                Name = director.Name,
+                AccountId = director.AccountId
+            };
             _context.Directors.Add(_director);
             try
             {

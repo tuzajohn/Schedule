@@ -40,9 +40,9 @@ namespace Scheduler.RestServices
         public Response<UserResponse> SendUser(UserBody user)
         {
             _restRequest = new RestRequest(Method.POST);
-            _restRequest.Resource = "user/adduser";
+            _restRequest.Resource = "users";
             _restRequest.AddJsonBody(user);
-            _restRequest.AddHeader("xlog", "admin");
+            _restRequest.AddHeader("xlog", "my api");
 
             var _response = _restClient.Execute<Response<UserResponse>>(_restRequest);
             if (!_response.IsSuccessful) { }

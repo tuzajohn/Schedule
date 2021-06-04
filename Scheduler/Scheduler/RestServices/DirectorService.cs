@@ -22,8 +22,7 @@ namespace Scheduler.RestServices
         public Director GetDirector(string id)
         {
             _restRequest = new RestRequest(Method.GET);
-            _restRequest.Resource = "directors/{id}";
-            _restRequest.AddParameter("id", id);
+            _restRequest.Resource = $"directors/{id}";
 
             var _response = _restClient.Execute<Response<Director>>(_restRequest);
             if (!_response.IsSuccessful) { return new Director(); }
@@ -38,7 +37,7 @@ namespace Scheduler.RestServices
             if (!_response.IsSuccessful) { return new List<Director>(); }
             return _response.Data.Data.OrderByDescending(x=>x.CreatedOn).ToList();
         }
-        public Director AddDirector(string name)
+        public Director AddDirector(string name, string accountId)
         {
             _restRequest = new RestRequest(Method.POST);
             _restRequest.Resource = "directors";
@@ -48,7 +47,8 @@ namespace Scheduler.RestServices
                 Dob = DateTime.UtcNow.AddYears(-15),
                 Id = Guid.NewGuid().ToString("N"),
                 IsDeleted = false,
-                Name = name
+                Name = name,
+                AccountId = accountId
             });
 
             var _response = _restClient.Execute<Response<Director>>(_restRequest);

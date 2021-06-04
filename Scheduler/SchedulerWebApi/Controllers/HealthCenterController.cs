@@ -16,7 +16,7 @@ namespace SchedulerWebApi.Controllers
 
         [HttpPost]
         [Route("healthfacility")]
-        public IActionResult AddNewCenter(HealthFacilityViewModel healthFacility)
+        public IActionResult AddNewCenter([FromBody]HealthFacilityViewModel healthFacility)
         {
             var _request = Request;
             var headers = _request.Headers;

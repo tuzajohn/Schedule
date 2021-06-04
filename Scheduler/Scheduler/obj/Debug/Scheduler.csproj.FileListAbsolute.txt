@@ -377,3 +377,7 @@ C:\Users\circuit\source\repos\Schedule\Scheduler\Scheduler\obj\Debug\Views\Shift
 C:\Users\circuit\source\repos\Schedule\Scheduler\Scheduler\obj\Debug\Views\Shifts\ShiftsForUser.baml
 C:\Users\circuit\source\repos\Schedule\Scheduler\Scheduler\obj\Debug\Views\Shifts\SetingShiftPage.g.cs
 C:\Users\circuit\source\repos\Schedule\Scheduler\Scheduler\obj\Debug\Views\Shifts\SetingShiftPage.baml
+C:\Users\circuit\source\repos\Schedule\Scheduler\Scheduler\obj\Debug\Views\Wards\AddNewWard.g.cs
+C:\Users\circuit\source\repos\Schedule\Scheduler\Scheduler\obj\Debug\Views\Wards\AddNewWard.baml
+C:\Users\circuit\source\repos\Schedule\Scheduler\Scheduler\obj\Debug\Views\Shifts\ViewSingleShift.g.cs
+C:\Users\circuit\source\repos\Schedule\Scheduler\Scheduler\obj\Debug\Views\Shifts\ViewSingleShift.baml

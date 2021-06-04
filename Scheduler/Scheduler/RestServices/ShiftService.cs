@@ -31,8 +31,7 @@ namespace Scheduler.RestServices
         public Response<List<Shift>> GetShiftForUser(string id)
         {
             _restRequest = new RestRequest(Method.GET);
-            _restRequest.Resource = "shifts/user/{id}";
-            _restRequest.AddParameter("id", id);
+            _restRequest.Resource = $"shifts/user/{id}";
 
             var _response = _restClient.Execute<Response<List<Shift>>>(_restRequest);
             if (!_response.IsSuccessful) { new Response<List<Shift>>(); }
@@ -41,8 +40,7 @@ namespace Scheduler.RestServices
         public Response<Shift> GetUser(string id)
         {
             _restRequest = new RestRequest(Method.GET);
-            _restRequest.Resource = "shifts/{id}";
-            _restRequest.AddParameter("id", id);
+            _restRequest.Resource = $"shifts/{id}";
 
             var _response = _restClient.Execute<Response<Shift>>(_restRequest);
             if (!_response.IsSuccessful) { new Response<Shift>(); }
@@ -51,9 +49,7 @@ namespace Scheduler.RestServices
         public Response<Shift> GetShiftPerdayForUser(int day, string id)
         {
             _restRequest = new RestRequest(Method.GET);
-            _restRequest.Resource = "shifts/{day}/users/{userid}";
-            _restRequest.AddParameter("day", day);
-            _restRequest.AddParameter("id", id);
+            _restRequest.Resource = $"shifts/{day}/users/{id}";
 
             var _response = _restClient.Execute<Response<Shift>>(_restRequest);
             if (!_response.IsSuccessful) { new Response<Shift>(); }
@@ -62,8 +58,7 @@ namespace Scheduler.RestServices
         public Response<List<Shift>> GetShiftForWard(string id)
         {
             _restRequest = new RestRequest(Method.GET);
-            _restRequest.Resource = "shifts/ward/{id}";
-            _restRequest.AddParameter("id", id);
+            _restRequest.Resource = $"shifts/ward/{id}";
 
             var _response = _restClient.Execute<Response<List<Shift>>>(_restRequest);
             if (!_response.IsSuccessful) { new Response<List<Shift>>(); }

@@ -12,6 +12,7 @@ namespace SchedulerWebApi.Models
     {
         [Key]
         public string Id { get; set; }
+        public string AccountId { get; set; }
         public string Name { get; set; }
         public DateTime Dob { get; set; }
         public DateTime CreatedOn { get; set; }

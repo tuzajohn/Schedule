@@ -46,9 +46,13 @@
                         <ComboBox materialDesign:HintAssist.Hint="Director"
                               Margin="0,18,10,0" FontSize="15" Name="DirectorBox" Text="{Binding Name}"
                               IsEditable="True" Style="{StaticResource MaterialDesignFloatingHintComboBox}">
-                            <ComboBoxItem IsSelected="True">
-                                Choose director
-                            </ComboBoxItem>
+                            <ComboBox.ItemTemplate>
+                                <DataTemplate>
+                                    <StackPanel Orientation="Horizontal">
+                                        <TextBlock Text="{Binding Name}" />
+                                    </StackPanel>
+                                </DataTemplate>
+                            </ComboBox.ItemTemplate>
                         </ComboBox>
 
 

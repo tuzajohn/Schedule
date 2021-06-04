@@ -53,7 +53,6 @@ namespace Scheduler.Views.Users
             _divisionService = new DivisionService(GlobalClass.CheckCoonection);
 
             DivisionBox.ItemsSource = divList = new ObservableCollection<DivisionResponse>();
-            WardComboBox.ItemsSource = _wards = new ObservableCollection<Ward>();
 
             var check = Support.TryGetSession("user", out string userData);
             user = JsonConvert.DeserializeObject<UserResponse>(userData);
@@ -100,9 +99,17 @@ namespace Scheduler.Views.Users
                 message += "Gender is required\n";
             if (string.IsNullOrEmpty(PasswordBox.Password))
                 message += "Password is required\n";
+
             if (message != "")
             {
                 MessageBox.Show(message, "Error(s)");
+                return;
+            }
+
+            if (!Support.IsPasswordValid(PasswordBox.Password))
+            {
+                MessageBox.Show("The password must be of at least 8 characters long, " +
+                        " and must include at least one upper case letter, one lower case letter, and one numeric digit ", "Password Error", MessageBoxButton.OK, MessageBoxImage.Information);
                 return;
             }
 
@@ -135,7 +142,8 @@ namespace Scheduler.Views.Users
                 FirstName = Fname.Text,
                 LastName = Lname.Text,
                 Gender = Gender.Text,
-                Ward = selectedWard.Id
+                Ward = selectedWard?.Id,
+                CenterId = healthFacility.Id
             };
 
             var userResponse = _userService.SendUser(user);
@@ -152,38 +160,6 @@ namespace Scheduler.Views.Users
             masterWindow.AddUserBtn.Visibility = Visibility.Visible;
         }
 
-        private void DivisionBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            var item = DivisionBox.SelectedItem as DivisionResponse;
-            if (item != null)
-            {
-                selectedDivision = item;
-                Task.Run(() =>
-                {
-                    var wards = _wardService.GetWardsByDivision(selectedDivision.Id);
-                    if (wards.Check)
-                    {
-                        foreach (var ward in wards.Data)
-                        {
-                            Dispatcher.Invoke(() =>
-                            {
-                                _wards.Add(ward);
-                            });
-                        }
-                    }
-                });
-            }
-            
-        }
-
-        private void WardComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            var item = WardComboBox.SelectedItem as Ward;
-            if (item != null)
-            {
-                selectedWard = item;
-                
-            }
-        }
+        
     }
 }

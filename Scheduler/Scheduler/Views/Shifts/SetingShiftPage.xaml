@@ -7,39 +7,40 @@
       mc:Ignorable="d" 
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="SetingShiftPage">
+      Title="all schedules">
 
     <Grid>
-        <materialDesign:Card Background="{DynamicResource PrimaryHueDarkBrush}"
-                             Foreground="{DynamicResource PrimaryHueDarkForegroundBrush}"
-                             Padding="0" VerticalAlignment="Stretch">
+        <materialDesign:Card Foreground="White"
+                             VerticalAlignment="Stretch">
             <Grid>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*" />
-                    <ColumnDefinition Width="*" />
-                    <ColumnDefinition Width="*" />
-                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="*"/>
 
-                <Button HorizontalAlignment="Center"
-                        Style="{StaticResource MaterialDesignToolForegroundButton}"
-                        Width="100" Height="100" Padding="2 0 2 0"
-                        materialDesign:RippleAssist.IsCentered="True">
-                    <materialDesign:PackIcon Kind="Phone" />
-                </Button>
-                <Button HorizontalAlignment="Center" Grid.Column="1"
-                        Style="{StaticResource MaterialDesignToolForegroundButton}"
-                        Width="100" Height="100" Padding="2 0 2 0"
-                        materialDesign:RippleAssist.IsCentered="True">
-                    <materialDesign:PackIcon Kind="User" />
-                </Button>
-                <Button HorizontalAlignment="Center" Grid.Column="2"
-                        Style="{StaticResource MaterialDesignToolForegroundButton}"
-                        Width="100" Height="100" Padding="2 0 2 0"
-                        materialDesign:RippleAssist.IsCentered="True">
-                    <materialDesign:PackIcon Kind="FormatListNumbered" />
-                </Button>
+                </Grid.RowDefinitions>
+                <StackPanel Orientation="Horizontal" Grid.Row="0" Margin="10,10" HorizontalAlignment="Stretch" Grid.ColumnSpan="2">
+                    <Button Style="{StaticResource MaterialDesignRaisedDarkButton}" VerticalAlignment="Top"
+                            ToolTip="Setting new schedule"
+                    HorizontalContentAlignment="Center" VerticalContentAlignment="Center" 
+                    Name="AddnewScheduleBtn" Click="AddnewScheduleBtn_Click">
+                        Setting new schedule
+                    </Button>
+                </StackPanel>
+                <StackPanel Grid.ColumnSpan="2" Margin="10,0" Grid.Row="2">
+                    <ListView ItemsSource="{Binding DirectorList}" Foreground="#fff" Name="directors">
+                        <ListView.View>
+                            <GridView>
+                                <GridViewColumn DisplayMemberBinding="{Binding UserName}" Header="Nurse" />
+                                <GridViewColumn DisplayMemberBinding="{Binding WardName}" Header="Name of Ward / Department" />
+                                <GridViewColumn DisplayMemberBinding="{Binding StartDay}" Header="StartDay" />
+                                <GridViewColumn DisplayMemberBinding="{Binding EndDay}" Header="EndDay" />
+                                <GridViewColumn DisplayMemberBinding="{Binding StartTime}" Header="Starting time" />
+                                <GridViewColumn DisplayMemberBinding="{Binding EndTime}" Header="Ending time" />
+                            </GridView>
+                        </ListView.View>
+                    </ListView>
+                </StackPanel>
             </Grid>
         </materialDesign:Card>
-
     </Grid>
 </Page>

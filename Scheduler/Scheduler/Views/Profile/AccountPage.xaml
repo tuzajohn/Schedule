@@ -94,7 +94,7 @@
                                 ToolTip="Updating Account Data" Width="300" Click="UpdateAccount_Click"
                                 HorizontalAlignment="Stretch" Name="UpdateAccount">
                             <TextBlock>
-                                <materialDesign:PackIcon Kind="Update" /> Make Updates
+                                <materialDesign:PackIcon Kind="Update" /> Change password
                             </TextBlock>
                         </Button>
                     </Grid>

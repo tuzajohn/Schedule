@@ -13,18 +13,24 @@ namespace Scheduler.Views.SuperUser
     public partial class HealthFacility : Page
     {
         ObservableCollection<HealthFacilityResponse> healthFacilityResponses;
+        ObservableCollection<Director> directorList;
         HealthFacilityService _healthFacilityService;
+        UserService userService;
+        LoginService loginService;
         private DirectorService _directorService;
         public HealthFacility()
         {
             InitializeComponent();
             _healthFacilityService = new HealthFacilityService(GlobalClass.CheckCoonection);
             _directorService = new DirectorService(GlobalClass.CheckCoonection);
+            userService = new UserService(GlobalClass.CheckCoonection);
+            loginService = new LoginService(GlobalClass.CheckCoonection);
             healthFacilityResponses = new ObservableCollection<HealthFacilityResponse>();
-            LoadDirector();
 
             facilities.ItemsSource = healthFacilityResponses;
+            DirectorBox.ItemsSource = directorList = new ObservableCollection<Director>();
 
+            LoadDirector();
             LoadFacilities();
         }
 
@@ -48,8 +54,9 @@ namespace Scheduler.Views.SuperUser
                 AddressBox.Focus();
                 return;
             }
-
-            var _response = _healthFacilityService.CreateCenter(NameBox.Text, AddressBox.Text, DirectorBox.Text);
+            var selectedDirector = (Director)DirectorBox.SelectedItem;
+            var user = userService.GetUserByAccountId(selectedDirector.AccountId);
+            var _response = _healthFacilityService.CreateCenter(NameBox.Text, AddressBox.Text, user.Data.Id);
             MessageBox.Show(_response.Message);
 
             if (_response.Check)
@@ -73,6 +80,8 @@ namespace Scheduler.Views.SuperUser
             
             foreach (var facility in _healthFacilityService.Get())
             {
+                var director = _directorService.GetDirector(facility.Director);
+                facility.Director = director?.Name;
                 healthFacilityResponses.Add(facility);
             }
         }
@@ -81,7 +90,7 @@ namespace Scheduler.Views.SuperUser
         {
             foreach (var _director in _directorService.GetAll())
             {
-                DirectorBox.Items.Add(_director.Name);
+                directorList.Add(_director);
             }
         }
     }

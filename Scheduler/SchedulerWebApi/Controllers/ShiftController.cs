@@ -31,7 +31,7 @@ namespace SchedulerWebApi.Controllers
         /// <returns></returns>
         [HttpPost]
         [Route("shifts")]
-        public IActionResult SetShift(ShiftPost shift)
+        public IActionResult SetShift([FromBody]ShiftPost shift)
         {
 
             #region headerCheck
@@ -269,6 +269,40 @@ namespace SchedulerWebApi.Controllers
             return Ok(new { data = _shift.shifts.OrderBy(x => x.CreatedOn).ToList(), _shift.message, _shift.check });
         }
 
+        [HttpPut]
+        [Route("shifts/user/{id}")]
+        public IActionResult SwitchShift(string id, int day ,string userId)
+        {
+            #region headerCheck
+            //var headers = Request.Headers;
+            //if (!headers.ContainsKey("xlog"))
+            //{
+            //    return Ok(new { message = "Information is missing (xlog)" });
+            //}
+
+            //var token = headers["xlog"].First();
+            //if (token != "my api")
+            //{
+            //    return Ok(new { message = "Information is missing (xlog)" });
+            //}
+            #endregion
+
+            var _shift = _shiftService.GetByDate(day.ToString(), userId);
+            if (!_shift.check)
+            {
+                return Ok(new { data = _shift.shift, _shift.message, _shift.check });
+            }
+
+            _shift = _shiftService.Get(id);
+
+            var shift = _shift.shift;
+
+            shift.UserId = userId;
+
+            _shift = _shiftService.Update(id, shift);
+
+            return Ok(new { data = _shift.shift, message = _shift.check ? "Updated" : _shift.message, _shift.check });
+        }
         private void TransferToHistory(List<Shift> shifts)
         {
             var taskList = new List<Task>();

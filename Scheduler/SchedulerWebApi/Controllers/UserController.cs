@@ -124,14 +124,14 @@ namespace SchedulerWebApi.Controllers
         public IActionResult GetUserByDivisionId(string id)
         {
             var (center, message, check) = _healtFacility.Get(id);
-            var data = new User();
+            var data = new List<User>();
             message = "";
             if (check)
             {
-                var _user = _userService.Get().users.SingleOrDefault(x => x.CenterId == id);
+                var _user = _userService.Get().users.Where(x => x.CenterId == id);
                 if (_user != null)
                 {
-                    data = _user;
+                    data = _user.ToList();
                     message = null;
                     check = true;
                 }
@@ -139,7 +139,7 @@ namespace SchedulerWebApi.Controllers
             }
             else { data = null; }
 
-            return Ok(new ApiResponse<User>
+            return Ok(new ApiResponse<List<User>>
             {
                 Data = data,
                 Check = check,

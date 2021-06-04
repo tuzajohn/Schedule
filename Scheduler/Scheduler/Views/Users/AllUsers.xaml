@@ -10,82 +10,50 @@
       Title="AllUsers">
 
     <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="*"/>
-        </Grid.RowDefinitions>
+        
 
-        <ScrollViewer VerticalScrollBarVisibility="Visible" HorizontalScrollBarVisibility="Disabled">
-            <ListBox IsSynchronizedWithCurrentItem="True" Name="lvDataBinding" Margin="5" 
-                         SelectionMode="Extended" SelectedIndex="0">
-                <ListBox.ContextMenu>
-                    <ContextMenu>
-                        <MenuItem Header="Edit" Click="MenuItem_Click"/>
-                    </ContextMenu>
-                </ListBox.ContextMenu>
-                <ListBox.ItemTemplate>
-                    <DataTemplate>
+        <materialDesign:Card Foreground="White"
+                             VerticalAlignment="Stretch">
+            <Grid>
+                <StackPanel >
 
-                        <materialDesign:Card Background="{DynamicResource PrimaryHueDarkBrush}"
-                                             Foreground="{DynamicResource PrimaryHueDarkForegroundBrush}"
-                                             Padding="0" Width="240">
-                            <Grid>
-                                <Grid.RowDefinitions>
-                                    <RowDefinition Height="Auto" />
-                                    <RowDefinition Height="Auto" />
-                                    <RowDefinition Height="Auto" />
-                                    <RowDefinition Height="Auto" />
-                                </Grid.RowDefinitions>
+                    <ListView Foreground="#ffffff" Name="lvDataBinding">
+                        <ListView.View>
+                            <GridView>
+                                <GridViewColumn DisplayMemberBinding="{Binding Name}" Header="Name" Width="100" />
+                                <GridViewColumn DisplayMemberBinding="{Binding Date}" Header="Date" Width="150"/>
                                 
-                                <TextBlock Grid.Row="0" Margin="16 16 16 4"
-                                           Style="{StaticResource MaterialDesignHeadlineTextBlock}" Text="{Binding Name}"/>
-                                
-                                <TextBlock Grid.Row="1" Margin="16 5 16 4" FontSize="15"
-                                           Style="{StaticResource MaterialDesignHeadlineTextBlock}" Text="{Binding Ward}"/>
-
-                                <Separator Grid.Row="2"
-                                           Style="{StaticResource MaterialDesignLightSeparator}" />
-                                
-                                <TextBlock Grid.Row="3" Margin="16 0 18 8"
-                                           VerticalAlignment="Center"
-                                           HorizontalAlignment="Left"
-                                           Style="{StaticResource MaterialDesignBody2TextBlock}" Text="{Binding Date}"/>
-
-
-                                <StackPanel Grid.Row="3" Orientation="Horizontal" Margin="16 0 16 8"
-                                            HorizontalAlignment="Right">
-                                    <Button HorizontalAlignment="Right"
+                                <GridViewColumn>
+                                    <GridViewColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <Button HorizontalAlignment="Right"
                                             Style="{StaticResource MaterialDesignToolForegroundButton}"
-                                            Width="30" Padding="2 0 2 0"
-                                            materialDesign:RippleAssist.IsCentered="True"
-                                            Click="Button_Click">
-                                        <materialDesign:PackIcon Kind="Phone" />
-                                    </Button>
-                                    <Button HorizontalAlignment="Right"
-                                            Style="{StaticResource MaterialDesignToolForegroundButton}"
-                                            Width="30" Padding="2 0 2 0"
+                                            Width="100" Padding="2 0 2 0"
                                             materialDesign:RippleAssist.IsCentered="True"
                                             Click="ViewUSerBtn_Click">
-                                        <materialDesign:PackIcon Kind="User" />
-                                    </Button>
-                                    <Button HorizontalAlignment="Right"
+                                               View user
+                                            </Button>
+                                        </DataTemplate>
+                                    </GridViewColumn.CellTemplate>
+                                </GridViewColumn>
+                                <GridViewColumn>
+                                    <GridViewColumn.CellTemplate>
+                                        <DataTemplate>
+                                            <Button HorizontalAlignment="Right"
                                             Style="{StaticResource MaterialDesignToolForegroundButton}"
-                                            Width="30" Padding="2 0 2 0"
+                                            Width="100" Padding="2 0 2 0"
                                             materialDesign:RippleAssist.IsCentered="True"
                                             Click="ViewShiftsUserBtn_Click">
-                                        <materialDesign:PackIcon Kind="FormatListNumbered" />
-                                    </Button>
-                                </StackPanel>
-                            </Grid>
-                        </materialDesign:Card>
-                    </DataTemplate>
-                </ListBox.ItemTemplate>
-                <ListBox.ItemsPanel>
-                    <ItemsPanelTemplate>
-                        <WrapPanel/>
-                    </ItemsPanelTemplate>
-                </ListBox.ItemsPanel>
-            </ListBox>
-        </ScrollViewer>
-
+                                                View shifts
+                                            </Button>
+                                        </DataTemplate>
+                                    </GridViewColumn.CellTemplate>
+                                </GridViewColumn>
+                            </GridView>
+                        </ListView.View>
+                    </ListView>
+                </StackPanel>
+            </Grid>
+        </materialDesign:Card>
     </Grid>
 </Page>

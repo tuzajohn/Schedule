@@ -65,6 +65,15 @@ namespace Scheduler
                 return false;
             }
         }
+        public static bool IsPasswordValid(string password)
+        {
+            var reg = new Regex("^(?=.*\\d)(?=.*[a-z])(?=.*[A-Z]).{8,}$");
+            if (reg.IsMatch(password))
+            {
+                return true;
+            }
+            return false;
+        }
     }
     public static class Extensions
     {

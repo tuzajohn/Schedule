@@ -24,11 +24,13 @@ namespace Scheduler.Views.SuperUser
     {
         private DirectorService _directorService;
         private LoginService _loginService;
+        private UserService userService;
         public NewDirector()
         {
             InitializeComponent();
             _directorService = new DirectorService(GlobalClass.CheckCoonection);
             _loginService = new LoginService(GlobalClass.CheckCoonection);
+            userService = new UserService(GlobalClass.CheckCoonection);
         }
 
         private void SaveDirector_Click(object sender, RoutedEventArgs e)
@@ -60,17 +62,25 @@ namespace Scheduler.Views.SuperUser
                 return;
             }
 
-
-            var _director = _directorService.AddDirector(name.Text);
-
             var _account = _loginService.SendLogin(new Models.Account
             {
                 Date = DateTime.UtcNow,
                 Email = email.Text,
                 Password = password.Password,
-                Id = _director.Id,
                 IsAdmin = true
             });
+
+            var _director = _directorService.AddDirector(name.Text, _account.Data.Id);
+            var user = new UserBody
+            {
+                Id = Guid.NewGuid().ToString(),
+                AccountId = _account.Data.Id,
+                CreatedOn = DateTime.UtcNow,
+                DoB = DateTime.UtcNow,
+                Email = email.Text,
+            };
+
+            var userResponse = userService.SendUser(user);
 
             MessageBox.Show("Director has been added");
             name.Text = "";

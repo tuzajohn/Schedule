@@ -25,14 +25,7 @@
         </ResourceDictionary>
     </Window.Resources>
     <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width=".5*"/>
-            <ColumnDefinition Width=".5*"/>
-        </Grid.ColumnDefinitions>
-        <Grid.RowDefinitions>
-            <RowDefinition Height=".5*" />
-            <RowDefinition Height=".5*" />
-        </Grid.RowDefinitions>
+        
         
         
         
@@ -59,93 +52,7 @@
         </materialDesign:Card>
         
         
-        <!--Division Grid-->
-        <materialDesign:Card Background="White"
-                             Foreground="Black"
-                             Padding="8" UniformCornerRadius="6" Grid.Column="0"
-                             Grid.Row="1"  Margin="10 5 5 10"
-                             HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
-            <StackPanel HorizontalAlignment="Stretch" VerticalAlignment="Center">
-                <StackPanel>
-                    <TextBox Style="{StaticResource MaterialDesignOutlinedTextFieldTextBox}" VerticalAlignment="Top"
-                             AcceptsReturn="True" TextWrapping="Wrap" Margin="5 10"
-                             materialDesign:HintAssist.Hint="Division Name" Name="DivisionName" />
-                    
-                    <TextBox Style="{StaticResource MaterialDesignOutlinedTextFieldTextBox}"
-                             Margin="5 10" VerticalAlignment="Top" Height="100"
-                             AcceptsReturn="True" TextWrapping="Wrap" VerticalScrollBarVisibility="Auto" Visibility="Hidden"
-                             materialDesign:HintAssist.Hint="Division description" Name="DivisionDescriptionBox" />
-                </StackPanel>
-                <Button Style="{StaticResource MaterialDesignRaisedAccentButton}" Width="auto" Margin="5 10"
-                        ToolTip="Updating Division" Name="UpdateDivisionBtn" Click="UpdateDivisionBtn_Click">
-                    Update Division
-                </Button>
-            </StackPanel>
-        </materialDesign:Card>
-        
-        
-        <!--Ward Grid-->
-        <materialDesign:Card Background="White"
-                             Foreground="Black"
-                             Padding="8" UniformCornerRadius="6" Grid.Column="1"
-                             Grid.Row="0"  Margin="5 10 10 5"
-                             HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
-            <StackPanel HorizontalAlignment="Stretch" VerticalAlignment="Center">
-                <StackPanel>
-                    <TextBox Style="{StaticResource MaterialDesignOutlinedTextFieldTextBox}" VerticalAlignment="Top"
-                             AcceptsReturn="True" TextWrapping="Wrap" Margin="5 10"
-                             materialDesign:HintAssist.Hint="Ward Name" Name="WardNameBox" />
 
-                    <TextBox Style="{StaticResource MaterialDesignOutlinedTextFieldTextBox}"
-                             Margin="5 10" VerticalAlignment="Top" Height="100"
-                             AcceptsReturn="True" TextWrapping="Wrap" VerticalScrollBarVisibility="Auto"
-                             materialDesign:HintAssist.Hint="Ward description" Name="WardDescriptionBox" />
-                </StackPanel>
-                <Button Style="{StaticResource MaterialDesignRaisedAccentButton}" Width="auto" Margin="5 10"
-                        ToolTip="Updating Division" Name="UpdateWardBtn" Click="UpdateWardBtn_Click">
-                    Update Ward
-                </Button>
-            </StackPanel>
-        </materialDesign:Card>
-        
-        
-        <!--User Grid-->
-        <materialDesign:Card Background="White"
-                             Foreground="Black"
-                             Padding="8" UniformCornerRadius="6" Grid.Column="1"
-                             Grid.Row="1" Margin="5 5 10 10"
-                             HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
-            <StackPanel HorizontalAlignment="Stretch" VerticalAlignment="Center">
-                <StackPanel>
-                    <ComboBox materialDesign:HintAssist.Hint="Marital Status" IsEditable="True" Margin="5 10"
-                              Style="{StaticResource MaterialDesignFloatingHintComboBox}" Name="MaritalStatusComboBox">
-                        <ComboBoxItem>
-                            Married
-                        </ComboBoxItem>
-                        <ComboBoxItem>
-                            Single
-                        </ComboBoxItem>
-                        <ComboBoxItem>
-                            Divorced
-                        </ComboBoxItem>
-                        <ComboBoxItem>
-                            Widow / Widower
-                        </ComboBoxItem>
-                    </ComboBox>
-
-
-                    <TextBox Style="{StaticResource MaterialDesignOutlinedTextFieldTextBox}" Name="address"
-                             Margin="5 10" VerticalAlignment="Top" Height="100"
-                             AcceptsReturn="True" TextWrapping="Wrap" VerticalScrollBarVisibility="Auto"
-                             materialDesign:HintAssist.Hint="My Address" />
-
-                </StackPanel>
-                <Button Style="{StaticResource MaterialDesignRaisedAccentButton}" Width="auto" Margin="5 10"
-                        ToolTip="Updating Division" Name="UpdateUserDataBtn" Click="UpdateUserDataBtn_Click">
-                    Update My User Details
-                </Button>
-            </StackPanel>
-        </materialDesign:Card>
 
     </Grid>
 </Window>

@@ -10,7 +10,10 @@ xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
       Title="Directors">
 
     <Grid>
-        <Grid.RowDefinitions>
+        <materialDesign:Card Foreground="White"
+                             VerticalAlignment="Stretch">
+            <Grid>
+                <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
             <RowDefinition Height="*"/>
             
@@ -24,16 +27,17 @@ xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
             </Button>
         </StackPanel>
         <StackPanel Grid.ColumnSpan="2" Margin="10,0" Grid.Row="2">
-            <ListView ItemsSource="{Binding DirectorList}" Foreground="#ffffff" Name="directors">
+            <ListView ItemsSource="{Binding DirectorList}" Foreground="#fff" Name="directors">
                 <ListView.View>
                     <GridView>
                         <GridViewColumn DisplayMemberBinding="{Binding Name}" Header="Name" />
-                        <GridViewColumn DisplayMemberBinding="{Binding Username}" Header="Director" />
-                        <GridViewColumn DisplayMemberBinding="{Binding DoB}" Header="Address" />
-                        <GridViewColumn DisplayMemberBinding="{Binding CreatedOn}" Header="Date" />
+                                <GridViewColumn DisplayMemberBinding="{Binding Username}" Header="Username" />
+                                <GridViewColumn DisplayMemberBinding="{Binding CreatedOn}" Header="Date" />
                     </GridView>
                 </ListView.View>
             </ListView>
-        </StackPanel>
+                </StackPanel>
+            </Grid>
+        </materialDesign:Card>
     </Grid>
 </Page>
